@@ -454,6 +454,7 @@ html {
     margin-bottom: 30px;
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
+    text-align: center;
 }
 .cv-container {
     text-align: center;

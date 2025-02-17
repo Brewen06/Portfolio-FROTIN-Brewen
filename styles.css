@@ -447,7 +447,14 @@ html {
 }
 
 /* Style de la section CV */
-
+#cv h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
 .cv-container {
     text-align: center;
     margin-top: 50px;

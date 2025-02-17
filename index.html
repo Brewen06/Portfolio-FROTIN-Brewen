@@ -201,13 +201,13 @@
     <!-- Affichage du CV en PDF intégré dans la page -->
     <object class="cv-embed" data="CV.pdf" type="application/pdf" style="width:100%; height: 600px;" aria-label="CV">
         <!-- Message alternatif si le PDF ne peut pas être affiché -->
-        <p>Votre navigateur ne prend pas en charge l'affichage des fichiers PDF. Vous pouvez <a href="CV.pdf" download>télécharger le CV ici</a>.</p>
+        <p><button onclick="window.location.href='chemin/vers/tonCV.pdf'">Voir mon CV</button></p>
     </object>
 
     <!-- Lien pour télécharger le CV -->
     <div class="cv-download">
         <a href="CV.pdf" class="cv-download-button" download>
-            <button class="wp-element-button">Télécharger le CV</button>
+            <button class="wp-element-button">Télécharger mon CV</button>
         </a>
     </div>
 		</div>
@@ -220,7 +220,7 @@
     <section id="contact" class="contact">
     <div class="container">
         <h2>Contactez-moi</h2>
-        <p>Si mon profil vous intéresse, vous pouvez me contacter par différents moyens :</p>
+        <p>Si mon profil vous intéresse, vous pouvez me contacter par ces différents moyens :</p>
         <div class="contact-info">
             <div class="contact-item">
                 <i class="fas fa-envelope"></i>

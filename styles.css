@@ -124,6 +124,7 @@ html {
     padding: 50px 20px;
     text-align: center;
     background-color: #938f91;
+    border-width: 2px;
 }
 
 #presentation h2 {
@@ -213,6 +214,7 @@ html {
     background-color: #6052e1;
     padding: 30px 20px;   
     text-align: center;        /* Centre le texte à l'intérieur du conteneur */
+    border-width: 2px;
 }
 
 /* Style du titre de la section */

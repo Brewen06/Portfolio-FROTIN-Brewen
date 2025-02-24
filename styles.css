@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+section {
+    border: 2px solid #000;  /* Bordure de 2px, couleur noire */
+    padding: 20px;            /* Espace autour du contenu */
+    margin-bottom: 20px;      /* Espace sous chaque section */
+}
 /* BODY */
 body {
     font-family: 'Arial', sans-serif;

@@ -1,549 +1,311 @@
-/* RESET DE BASE */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-section {
-    padding: 20px;            /* Espace autour du contenu */
-    margin-bottom: 20px;      /* Espace sous chaque section */
-}
-/* BODY */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #ecb09d;
+    background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
 }
 
-/* NAVBAR */
+h1, h2, h3, h4 {
+    font-family: 'Helvetica', sans-serif;
+}
+
+/* Colors */
+:root {
+    --blue-color: #3A5BA3; /* Bleu électrique */
+    --orange-color: #FF6A13; /* Orange vif */
+    --light-gray: #f4f4f4;
+    --dark-gray: #333;
+}
+
+/* Header */
 header {
-    position: fixed; /* Fixe la barre en haut */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(51, 51, 51, 0.9); /* Fond semi-transparent */
-    color: white;
-    z-index: 1000;
-    transition: background-color 0.3s ease; /* Transition fluide pour l'effet */
-    padding: 15px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ajout d'une légère ombre */
+    background-color: var(--blue-color);
+    padding: 20px 0;
 }
 
-/* Structure de la barre de navigation */
 .navbar {
-    display: flex; /* Utilise Flexbox pour aligner les éléments horizontalement */
-    justify-content: space-between; /* Espace entre le logo et les liens */
-    align-items: center; /* Aligne verticalement les éléments */
-    max-width: 1200px; /* Limite la largeur du conteneur */
-    margin: 0 auto; /* Centrer la barre dans la page */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Logo */
 .navbar .logo h1 {
-    font-size: 1.8rem;
-    font-weight: bold;
+    font-size: 2rem;
+    color: white;
 }
 
-/* Liste des liens de navigation */
 .nav-links {
-    display: flex; /* Aligne les liens horizontalement */
-    gap: 20px; /* Espacement entre chaque lien */
-}
-
-.nav-links li {
-    list-style-type: none; /* Supprime les puces */
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links li a {
-    font-size: 1rem;
-    font-weight: bold;
     color: white;
-    padding: 5px 10px; /* Espacement autour du texte */
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
     transition: color 0.3s ease;
 }
 
-/* Effet au survol des liens */
 .nav-links li a:hover {
-    color: #3498db; /* Change la couleur au survol */
+    color: var(--orange-color);
 }
 
-/* Corps du site - espace pour ne pas cacher le contenu sous la barre de navigation */
-body {
-    margin-top: 80px; /* Ajoute de l'espace en haut pour éviter que le contenu soit caché sous la barre */
-}
-
-/* Effet de changement de couleur de la barre lors du défilement */
-.scrolled {
-    background-color: rgba(51, 51, 51, 1); /* Fond plus opaque quand on fait défiler */
-}
-
-/* Effet de défilement smooth */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Media Queries - Responsive design pour les petits écrans */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Sur les petits écrans, on empile le logo et les liens */
-        align-items: flex-start; /* Aligne les éléments à gauche */
-    }
-
-    .nav-links {
-        flex-direction: column; /* Empile les liens verticalement */
-        gap: 10px; /* Espacement réduit entre les liens */
-    }
-
-    .nav-links li a {
-        padding: 10px 0; /* Plus d'espace autour du texte */
-    }
-}
-
-/* SECTION ACCUEIL */
-#accueil {
-    background: url('image-accueil.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Hero Section */
+.hero {
+    background-color: var(--blue-color);
     color: white;
     text-align: center;
+    padding: 100px 20px;
 }
 
-#accueil h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* SECTION À PROPOS */
-#presentation {
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #938f91;
-    border-width: 2px;
-}
-
-#presentation h2 {
+.hero h2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    font-family: 'Helvetica', sans-serif;
 }
 
-#presentation p {
-    font-size: 1.1rem;
+.hero p {
+    font-size: 1.2rem;
     max-width: 800px;
     margin: 0 auto;
 }
 
-/* SECTION COMPÉTENCES */
-#competences {
-    padding: 50px 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
+/* About Section */
+.about {
+    background-color: var(--light-gray);
+    padding: 60px 20px;
 }
 
-#competences h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-	color: #3498db;
+.about .container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
+.about h2 {
+    font-size: 2rem;
+    color: var(--blue-color);
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1rem;
+    color: var(--dark-gray);
+}
+
+/* Skills Section */
 .skills {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
+    background-color: #fff;
+    padding: 60px 20px;
 }
 
 .skills .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
-    text-align: center;
 }
 
 .skills h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.competence-category {
-    margin-bottom: 40px;
-    text-align: left;
-}
-
-.competence-category h3 {
-    font-size: 1.8rem;
-    color: #3498db;
-    margin-bottom: 15px;
-}
-
-.competence-category ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.competence-category ul li {
-    font-size: 1.2rem;
-    line-height: 1.6;
-    padding-left: 20px;
-    position: relative;
-}
-
-.competence-category ul li::before {
-    content: '-';
-    position: absolute;
-    left: 0;
-    color: #2ecc71;
-}
-
-.competence-category ul li strong {
-    color: #2980b9;
-    font-weight: bold;
-}
-
-/* SECTION PROJETS */
-/* Style de base pour la section Projets */
-#projets {
-    display: flex;
-    justify-content: center;  /* Centre le contenu horizontalement */
-    align-items: center;      /* Centre le contenu verticalement */
-    height: 100vh;            /* Utilise 100% de la hauteur de la fenêtre */
-    background-color: #6052e1;
-    padding: 30px 20px;   
-    text-align: center;        /* Centre le texte à l'intérieur du conteneur */
-    border-width: 2px;
-}
-
-/* Style du titre de la section */
-#projets h2 {
-    font-size: 2rem; /* Réduction de la taille du titre */
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-/* Description du projet */
-.project-description p {
-    font-size: 1.1rem;
-    max-width: 700px; /* Limite la largeur du texte */
-    margin: 0 auto;
-    text-align: center; /* Centrer le texte */
-}
-
- /* Style général de la section */
-#experiences {
-    background-color: #9d52cd; /* Choisis une couleur qui te convient (ici un bleu clair) */
-    padding: 40px 20px;  
-    color: #333;  /* Couleur de texte sombre pour une meilleure lisibilité */
-    font-family: 'Arial', sans-serif;
-}
-
-/* Conteneur de la section */
-.experiences .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: left;  /* Alignement du texte à gauche pour un look plus professionnel */
-}
-
-/* Titre de la section */
-#experiences h2 {
     font-size: 2rem;
-    font-weight: bold;
-    color: #333; /* Assure-toi que le titre reste bien visible */
-    text-align: center;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #ddd;  /* Ligne en bas du titre pour séparer visuellement */
-    padding-bottom: 10px;
-}
-
-/* Texte introductif */
-#experiences p {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/* Liste des expériences */
-.experience-list {
-    list-style-type: none; /* Supprimer les puces de la liste */
-    padding: 0;
-}
-
-/* Élément de la liste des expériences */
-.experience-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;  /* Espacement entre les éléments */
-    font-size: 1.1rem;
-	background-color: #ffffff; /* Blanc pour chaque item pour une meilleure lisibilité */
-    border-radius: 8px; /* Ajouter des bords arrondis */
-    padding: 15px;
-    margin: 10px 0; /* Espacement entre les éléments */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.experience-item i {
-    font-size: 1.6rem;  /* Taille de l'icône */
-    margin-right: 10px; /* Espacement entre l'icône et le texte */
-    color: #00796b;  /* Espacement entre l'icône et la description */
-}
-
-/* Description des expériences */
-.experience-description {
-    color: #555; /* Assurer une bonne lisibilité du texte */
-    font-size: 1rem; /* Couleur de texte pour la description */
-    line-height: 1.6;
-    flex: 1;  /* L'élément de texte prend toute la largeur restante */
-}
-
-/* Style pour les icônes FontAwesome */
-.fas {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-}
-
- /* Style général pour la section Diplômes */
-#diplomes {
-    padding: 40px 20px;
-    background-color: #d2a870;  /* Fond léger */
-    color: #333;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Conteneur central de la section */
-.diplomes .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: left;
-}
-
-/* Titre principal de la section */
-#diplomes h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
+    color: var(--blue-color);
     margin-bottom: 30px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
 }
 
-/* Section pour chaque école */
-.school-section {
-    margin-bottom: 30px;  /* Espace entre les différentes écoles */
-}
-
-/* Titre des sous-sections pour chaque établissement scolaire */
-.school-section h3 {
-    font-size: 1.8rem;
-    color: #007BFF;  /* Bleu pour les titres des écoles */
+.skills h3 {
+    font-size: 1.5rem;
+    color: var(--blue-color);
     margin-bottom: 15px;
 }
 
-/* Liste des diplômes */
-.diploma-list {
-    list-style-type: none;  /* Enlève les puces */
-    padding: 0;
+.skills ul {
+    list-style-type: none;
 }
 
-/* Élément de chaque diplôme */
-.diploma-item {
-    display: flex;
-    align-items: center;  /* Aligne l'icône et la description sur une même ligne */
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-}
-
-.diploma-item i {
-    font-size: 1.6rem;
-    color: #007BFF;  /* Couleur bleue pour les icônes */
-    margin-right: 15px;  /* Espacement entre l'icône et le texte */
-}
-
-/* Description du diplôme */
-.diploma-description {
-    color: #555;
-    line-height: 1.6;
-    flex: 1;
-}
-
-/* Style pour les icônes FontAwesome */
-.fas {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-}
-
-/* Style général pour la section Certifications */
-#certifications {
-    padding: 40px 20px;
-    background-color: #4c924a;  /* Fond léger */
-    color: #333;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Conteneur central de la section */
-.certifications .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: left;
-}
-
-/* Titre principal de la section */
-#certifications h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-}
-
-/* Liste des certifications */
-.certification-list {
-    list-style-type: none;  /* Enlève les puces */
-    padding: 0;
-}
-
-/* Élément de chaque certification */
-.certification-item {
-    display: flex;
-    align-items: center;  /* Aligne l'icône et la description sur une même ligne */
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-}
-
-.certification-item i {
-    font-size: 1.6rem;
-    color: #007BFF;  /* Couleur bleue pour les icônes */
-    margin-right: 15px;  /* Espacement entre l'icône et le texte */
-}
-
-/* Description de la certification */
-.certification-description {
-    color: #555;
-    line-height: 1.6;
-    flex: 1;
-}
-
-/* Style des liens (certification-button) */
-.certification-button {
-    padding: 8px 16px;
+.skills li {
     font-size: 1rem;
-    color: #fff;
-    background-color: #007BFF;  /* Bleu pour les boutons */
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin-left: 20px;
-    transition: background-color 0.3s ease;
+    color: var(--dark-gray);
+    margin-bottom: 10px;
 }
 
-.certification-button:hover {
-    background-color: #0056b3;  /* Couleur plus foncée au survol */
+/* Projects Section */
+.projects {
+    background-color: var(--light-gray);
+    padding: 60px 20px;
 }
 
-/* Style pour les icônes FontAwesome */
-.fas {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
+.projects .container {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-/* Style de la section CV */
-#cv h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-    text-align: center;
-}
-.cv-container {
-    text-align: center;
-    margin-top: 50px;
-    padding: 20px;
+.projects h2 {
+    font-size: 2rem;
+    color: var(--blue-color);
+    margin-bottom: 20px;
 }
 
-.cv-embed {
-    border: 1px solid #ddd; /* Bordure autour du PDF intégré */
-    border-radius: 8px;
+/* Experiences Section */
+.experiences {
+    background-color: white;
+    padding: 60px 20px;
 }
 
-.cv-download {
+.experiences .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.experiences h2 {
+    font-size: 2rem;
+    color: var(--blue-color);
+    margin-bottom: 20px;
+}
+
+.experience-list {
+    list-style-type: none;
     margin-top: 20px;
 }
 
-.cv-download-button {
-    display: inline-block;
-    text-decoration: none;
-}
-
-.cv-download-button button {
-    padding: 10px 20px;
+.experience-item {
     font-size: 1rem;
-    color: #fff;  /* Texte en blanc */
-    background-color: #333;  /* Fond gris foncé */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 20px;
 }
 
-/* Survol : Pas de changement de couleur, reste monochrome */
-.cv-download-button button:hover {
-    background-color: #333;  /* Pas de changement sur le fond */
-    color: #fff;  /* Le texte reste blanc */
+.experience-item i {
+    color: var(--blue-color);
+    margin-right: 10px;
 }
 
-/* Style de la section Contact */
+/* Diplomas Section */
+.diplomes {
+    background-color: #f4f4f4;
+    padding: 60px 20px;
+}
+
+.diplomes .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.diplomes h2 {
+    font-size: 2rem;
+    color: var(--blue-color);
+    margin-bottom: 20px;
+}
+
+.diploma-list {
+    list-style-type: none;
+}
+
+.diploma-item {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.diploma-item i {
+    color: var(--blue-color);
+    margin-right: 10px;
+}
+
+/* Certifications Section */
+.certifications {
+    background-color: white;
+    padding: 60px 20px;
+}
+
+.certifications .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.certifications h2 {
+    font-size: 2rem;
+    color: var(--blue-color);
+    margin-bottom: 20px;
+}
+
+.certification-list {
+    list-style-type: none;
+}
+
+.certification-item {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.certification-item i {
+    color: var(--blue-color);
+    margin-right: 10px;
+}
+
+/* Contact Section */
 .contact {
-    padding: 50px 20px;
-    background-color: #d16a85;
+    background-color: var(--light-gray);
+    padding: 60px 20px;
+}
+
+.contact .container {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .contact h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    color: var(--blue-color);
     margin-bottom: 20px;
-    color: #333;
-    text-align: center;
-}
-
-.contact p {
-    font-size: 1.2rem;
-    color: #555;
-    text-align: center;
-    margin-bottom: 30px;
 }
 
 .contact-info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 20px;
 }
 
 .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 1.2rem;
-    color: #333;
+    font-size: 1rem;
+    color: var(--dark-gray);
 }
 
 .contact-item i {
-    font-size: 1.5rem;
-    color: #007bff; /* Couleur des icônes */
+    color: var(--blue-color);
+    margin-right: 10px;
 }
 
-.contact-item a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+/* Footer */
+footer {
+    background-color: var(--blue-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
 
-.contact-item a:hover {
-    text-decoration: underline;
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        flex-direction: column;
+    }
 }

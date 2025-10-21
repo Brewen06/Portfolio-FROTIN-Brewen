@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+<section class="contact" aria-labelledby="contact-title">
+    <header class="contact_titre">
+        <h1 id="contact-title">Contact</h1>
+    </header>
+
+    <p class="contact_intro">Si mon profil vous intéresse, vous pouvez me contacter par :</p>
+
+    <div class="contact-methods"></div>
+        <section class="postale" aria-labelledby="postale-title">
+            <h2 id="postale-title">Adresse postale</h2>
+            <address>
+                La Grande Noé<br>
+                50140 Mortain-Bocage
+            </address>
+        </section>
+
+        <section class="mails" aria-labelledby="mails-title">
+            <h2 id="mails-title">Adresses e‑mail</h2>
+            <ul>
+                <li>Outlook : <a href="mailto:brewen2006@outlook.fr">brewen2006@outlook.fr</a></li>
+                <li>Infomaniak : <a href="mailto:brewen68@ik.me">brewen68@ik.me</a></li>
+            </ul>
+        </section>
+
+        <section class="tel" aria-labelledby="tel-title">
+            <h2 id="tel-title">Téléphones</h2>
+            <ul>
+                <li>Portable : <a href="tel:+33767193852">07 67 19 38 52</a></li>
+                <li>Fixe : <a href="tel:+33233499450">02 33 49 94 50</a></li>
+            </ul>
+        </section>
+    </div>
+</section>
+{% endblock %}

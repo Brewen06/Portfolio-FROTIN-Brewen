@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Expériences professionnelles{% endblock %}
+
+{% block body %}
+<section class="experiences" role="region" aria-labelledby="exp-title">
+    <header class="experiences_titre">
+        <h1 id="exp-title">Expériences professionnelles</h1>
+    </header>
+
+    <section class="stages" aria-labelledby="stages-title">
+        <h2 id="stages-title">Stages</h2>
+        <ul>
+            <li>
+                <article>
+                    <h3><span class="company">Atelier de Photographie — Avranches</span></h3>
+                    <p>Acquisition des techniques de base : colorimétrie, montage, tirage et agrandissements.</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h3><span class="company">Carrefour — Mortain</span></h3>
+                    <p>Découverte des opérations en magasin : facing, inventaires et gestion des stocks.</p>
+                </article>
+            </li>
+            <li>
+                <article>
+                    <h3><span class="company">Ferme Bellevue</span></h3>
+                    <p>Développement d'une application mobile Android pour centraliser des messages provenant de diverses plateformes.</p>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section class="travail" aria-labelledby="travail-title">
+        <h2 id="travail-title">Expériences en entreprise</h2>
+        <ul>
+            <li>
+                <article>
+                    <h3><span class="company">Carrefour — Mortain</span> <span class="role">Caissier</span></h3>
+                    <p>Service client, gestion de la caisse, suivi des commandes et maintien de la présentation des rayons.</p>
+                </article>
+            </li>
+        </ul>
+    </section>
+</section>
+{% endblock %}

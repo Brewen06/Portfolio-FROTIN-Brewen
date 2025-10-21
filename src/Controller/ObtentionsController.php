@@ -15,4 +15,18 @@ final class ObtentionsController extends AbstractController
             'controller_name' => 'ObtentionsController',
         ]);
     }
+    #[Route('/obtentions/certifications', name: 'app_obtentions_certifications')]
+    public function certifications(): Response
+    {
+        return $this->render('obtentions/certifications.html.twig', [
+            'controller_name' => 'ObtentionsController',
+        ]);
+    }
+    #[Route('/obtentions/diplomes', name: 'app_obtentions_diplomes')]
+    public function diplomas(): Response
+    {
+        return $this->render('obtentions/diplomes.html.twig', [
+            'controller_name' => 'ObtentionsController',
+        ]);
+    }
 }

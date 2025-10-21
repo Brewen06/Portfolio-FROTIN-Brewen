@@ -15,4 +15,28 @@ final class CompetencesController extends AbstractController
             'controller_name' => 'CompetencesController',
         ]);
     }
+
+    #[Route('/competences/programmation', name: 'app_competences_programmation')]
+    public function programmation(): Response
+    {
+        return $this->render('competences/programmation.html.twig', [
+            'controller_name' => 'CompetencesController',
+        ]);
+    }
+
+    #[Route('/competences/réseaux', name: 'app_competences_reseaux')]
+    public function reseaux(): Response
+    {
+        return $this->render('competences/reseaux.html.twig', [
+            'controller_name' => 'CompetencesController',
+        ]);
+    }
+
+    #[Route('/competences/cyber', name: 'app_competences_cyber')]
+    public function cyber(): Response
+    {
+        return $this->render('competences/cyber.html.twig', [
+            'controller_name' => 'CompetencesController',
+        ]);
+    }
 }

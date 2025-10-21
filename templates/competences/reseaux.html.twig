@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Compétences en administration réseau{% endblock %}
+
+{% block body %}
+<div class="reseau">
+    <h2>Compétences en administration réseau :</h2>
+    <ul>
+        <li><strong>Proxmox</strong> : Installation et gestion de consoles virtuelles (Windows 10 2022, Windows 10 Pro, Linux Debian) et de conteneurs.</li>
+        <li><strong>SSH</strong> : Sécurisation de consoles Debian.</li>
+        <li><strong>IPfire</strong> : Gestion des ports réseau.</li>
+    </ul>
+
+    <div class="windows">
+        <h3>Sur machines virtuelles <span class="badge bg-primary">Windows</span> :</h3>
+        <ul>
+            <li>
+                <strong>AD/DS (Active Directory/Domain Services)</strong>
+                <ul>
+                    <li>Création et gestion de GPO (stratégies de groupe)</li>
+                    <li>Création d'OU, attribution de rôles</li>
+                    <li>Mapping de lecteurs pour utilisateurs/groupes</li>
+                </ul>
+            </li>
+            <li>
+                <strong>LDAP (Lightweight Directory Access Protocol)</strong> : Intégration de domaines avec GLPI et Nextcloud.
+            </li>
+        </ul>
+    </div>
+
+    <div class="linux">
+        <h3>Sur machines virtuelles <span class="badge bg-success">Linux</span> :</h3>
+        <ul>
+            <li>
+                <strong>Apache2</strong>
+                <ul>
+                    <li>Création et sécurisation de sites web avec Apache2</li>
+                    <li>Configuration de virtualhosts</li>
+                    <li>Utilisation de liens LDAP</li>
+                </ul>
+            </li>
+            <li>
+                <strong>Docker</strong>
+                <ul>
+                    <li>Conteneurisation d'applications et de données</li>
+                    <li>Montage de volumes pour la persistance des données</li>
+                    <li>Utilisation de liens LDAP</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -190,7 +190,25 @@
 
     </header>
     <main>{% block body %}{% endblock %}</main>
-   
+    <footer>
+        <style>
+            footer {
+                text-align: center;
+                padding: 1.5rem;
+                background: #212529;
+                color: #f8f9fa;
+                margin-top: 2rem;
+            }
+            footer a {
+                color: #ffc107;
+                text-decoration: none;
+            }
+            footer a:hover {
+                text-decoration: underline;
+            }
+        </style>
+        <p>&copy; {{ "now"|date("Y") }} Brewen. Tous droits réservés. | <a href="/contact">Contact</a></p>
+    </footer>
 </body>
 
 </html>

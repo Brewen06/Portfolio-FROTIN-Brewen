@@ -1,17 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
 
-        {% block javascripts %}
-            {% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+    {% block stylesheets %}
+    {% endblock %}
+
+    {% block javascripts %}
+    {% block importmap %}{{ importmap('app') }}{% endblock %}
+    {% endblock %}
+</head>
+
+<body>
+    {% block body %}
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">Accueil</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/presentation">Présentation</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/competences" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Compétences
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/competences/programmation">Programmation</a></li>
+                            <li><a class="dropdown-item" href="/competences/reseaux">Réseaux</a></li>
+                            <li><a class="dropdown-item" href="/competences/cybersecurite">Cybersécurité</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/experiences">Expériences professionnelles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/projet">Projet professionnel</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/obtentions" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Obtentions
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/obtentions/certifications">Certifications</a></li>
+                            <li><a class="dropdown-item" href="/obtentions/diplomes">Diplômes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/cv">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/veille">Veille technologique</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    {% endblock %}
+</body>
+
 </html>

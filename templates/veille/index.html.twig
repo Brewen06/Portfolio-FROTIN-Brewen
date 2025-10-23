@@ -16,9 +16,10 @@
                     "user_agent": "Mozilla/5.0"
                 }
             } %}
-            {% set xml_content = function('file_get_contents', rss_url, false, function('stream_context_create', context)) %}
-            {% if xml_content %}
-                {% set xml = function('simplexml_load_string', xml_content) %}
+            {% set xml_content = '' %}
+            {% if rss_url is not empty %}
+                {% set xml_content = '' %}
+                {% set xml = false %}
             {% endif %}
             {% if xml and xml.channel and xml.channel.item %}
                 {% set feed_items = xml.channel.item %}

@@ -3,8 +3,10 @@
 {% block title %}CV{% endblock %}
 
 {% block body %}
-    <h2>Mon CV :</h2>
- <a href="cv.pdf" class="cv-download-button" download>
-            📄 Télécharger le CV
-        </a>
+<div class="cv">
+    <h2>CV</h2>
+    <p>Vous pouvez télécharger mon CV en cliquant sur le bouton ci-dessous :
+        <a href="{{ asset('CV.pdf') }}" download>Télécharger le CV (PDF) — lien direct</a>
+    </p>
+</div>
 {% endblock %}

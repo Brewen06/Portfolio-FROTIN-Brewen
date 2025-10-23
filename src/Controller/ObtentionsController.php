@@ -22,8 +22,13 @@ final class ObtentionsController extends AbstractController
             'controller_name' => 'ObtentionsController',
         ]);
     }
+    #[Route('/obtentions/diplomes/attestation-ANSSI.pdf', name: 'app_obtentions_diplomes_pdf')]
+    public function AfficherPDF(){
+        $path =  'C:\Users\ordi2124253\Documents\Portfolio-FROTIN-Brewen\public\attestation-ANSSI.pdf';
+        return $this->file($path);
+    }
     #[Route('/obtentions/diplomes', name: 'app_obtentions_diplomes')]
-    public function diplomas(): Response
+    public function diplomes(): Response
     {
         return $this->render('obtentions/diplomes.html.twig', [
             'controller_name' => 'ObtentionsController',

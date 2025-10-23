@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class ExperienceController extends AbstractController
 {
-    #[Route('/experience', name: 'app_experience')]
+    #[Route('/expériences', name: 'app_experience')]
     public function index(): Response
     {
         return $this->render('experience/index.html.twig', [

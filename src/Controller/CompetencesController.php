@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class CompetencesController extends AbstractController
 {
-    #[Route('/competences', name: 'app_competences')]
+    #[Route('/compétences', name: 'app_competences')]
     public function index(): Response
     {
         return $this->render('competences/index.html.twig', [
@@ -16,7 +16,7 @@ final class CompetencesController extends AbstractController
         ]);
     }
 
-    #[Route('/competences/programmation', name: 'app_competences_programmation')]
+    #[Route('/compétences/programmation', name: 'app_competences_programmation')]
     public function programmation(): Response
     {
         return $this->render('competences/programmation.html.twig', [
@@ -24,7 +24,7 @@ final class CompetencesController extends AbstractController
         ]);
     }
 
-    #[Route('/competences/réseaux', name: 'app_competences_reseaux')]
+    #[Route('/compétences/réseaux', name: 'app_competences_reseaux')]
     public function reseaux(): Response
     {
         return $this->render('competences/reseaux.html.twig', [
@@ -32,7 +32,7 @@ final class CompetencesController extends AbstractController
         ]);
     }
 
-    #[Route('/competences/cyber', name: 'app_competences_cyber')]
+    #[Route('/compétences/cybersécurité', name: 'app_competences_cyber')]
     public function cyber(): Response
     {
         return $this->render('competences/cyber.html.twig', [

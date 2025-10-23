@@ -3,17 +3,174 @@
 {% block title %}Compétences en cybersécurité{% endblock %}
 
 {% block body %}
-<div>
-    <h2>Compétences en cybersécurité :</h2>
-    <ul>
-        <li><strong>Clé privée et clé publique</strong> : Cryptographie asymétrique pour sécuriser les échanges.</li>
-        <li><strong>QRCode et Code Barre</strong> : Génération et validation de QR codes et codes-barres pour l'authentification et le suivi.</li>
-        <li><strong>Codage en base 64</strong> : Encodage et décodage de données en base 64 pour une transmission sécurisée.</li>
-        <li><strong>Cryptage irréversible de mot de passe</strong> : Hachage sécurisé (base 64) pour protéger les mots de passe.</li>
-        <li><strong>Cryptage réversible de données</strong> : Algorithmes de chiffrement symétrique pour protéger les données sensibles.</li>
-        <li><strong>Man In The Middle</strong> : Interception et manipulation des communications entre deux parties.</li>
-        <li><strong>Reconnaissance faciale</strong> : Techniques d'identification et de vérification des individus par leurs traits faciaux.</li>
-        <li><strong>XSS ET CSRF</strong> : Protection contre les attaques par injection de scripts et les falsifications de requêtes intersites.</li>
-    </ul>
+<div class="cyber">
+    <style>
+        .cyber {
+            max-width: 1100px;
+            margin: 24px auto;
+            padding: 24px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #17212b;
+            line-height: 1.5;
+        }
+
+        .cyber h2 {
+            margin: 0 0 14px 0;
+            font-size: 1.6rem;
+            color: #0f766e;
+            font-weight: 700;
+        }
+
+        .cyber .sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 12px;
+        }
+
+        .cyber section {
+            background: #f7f9fc;
+            border-radius: 10px;
+            padding: 14px;
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+        }
+
+        .cyber h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.05rem;
+            color: #0f1724;
+            border-left: 4px solid rgba(15,118,110,0.12);
+            padding-left: 10px;
+        }
+
+        .cyber ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 8px 0 0 0;
+        }
+
+        .cyber > .sections ul > li {
+            margin-bottom: 10px;
+        }
+
+        .cyber li > strong {
+            display: inline-block;
+            background: linear-gradient(180deg, #edf7f6, #ffffff);
+            padding: 6px 10px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: #075b52;
+            margin-bottom: 6px;
+        }
+
+        .cyber li ul {
+            margin-top: 8px;
+            padding-left: 14px;
+            border-left: 2px solid rgba(7,91,82,0.06);
+        }
+
+        .cyber li ul li {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 6px;
+            font-size: 0.95rem;
+        }
+
+        .cyber li ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #0f766e;
+            font-size: 0.9rem;
+            line-height: 1;
+        }
+
+        .cyber li ul li ul {
+            margin-top: 6px;
+            padding-left: 12px;
+            border-left: none;
+        }
+
+        @media (max-width: 520px) {
+            .cyber { padding: 16px; }
+            .cyber h2 { font-size: 1.3rem; }
+        }
+    </style>
+
+    <h2>Compétences en cybersécurité</h2>
+
+    <div class="sections">
+        <section class="fondamentaux">
+            <h3>Cryptographie & encodage</h3>
+            <ul>
+                <li>
+                    <strong>Clé privée / clé publique</strong>
+                    <ul>
+                        <li>Cryptographie asymétrique pour sécuriser échanges et signatures</li>
+                        <li>Gestion de clés (stockage, rotation, export/import)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Codage Base64</strong>
+                    <ul>
+                        <li>Encodage/décodage pour transit sécurisé et transmission de binaires</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Hachage & mots de passe</strong>
+                    <ul>
+                        <li>Hachage irréversible (salage, fonctions robustes) pour stockage sécurisé</li>
+                        <li>Compréhension des limites du simple Base64 pour la sécurité</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Chiffrement symétrique</strong>
+                    <ul>
+                        <li>Chiffrement réversible pour protéger données sensibles en transit et au repos</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="attaques">
+            <h3>Attaques & vecteurs</h3>
+            <ul>
+                <li>
+                    <strong>Man In The Middle (MITM)</strong>
+                    <ul>
+                        <li>Interception et altération des communications; mitigation par TLS et authentification mutuelle</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>XSS & CSRF</strong>
+                    <ul>
+                        <li>Protection contre injections de scripts et falsification de requêtes (CSP, validation, tokens)</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="outils">
+            <h3>Outils & intégration</h3>
+            <ul>
+                <li>
+                    <strong>QRCode & codes-barres</strong>
+                    <ul>
+                        <li>Génération, validation et cas d'usage (authentification, suivi)</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Reconnaissance faciale</strong>
+                    <ul>
+                        <li>Techniques d'identification/verification et enjeux de confidentialité</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </div>
 </div>
 {% endblock %}

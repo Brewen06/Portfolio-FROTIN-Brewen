@@ -3,10 +3,16 @@
 {% block title %}CV{% endblock %}
 
 {% block body %}
-<div class="cv">
-    <h2>CV</h2>
-    <p>Vous pouvez télécharger mon CV en cliquant sur le bouton ci-dessous :
-        <a href="{{ asset('CV.pdf') }}" download>Télécharger le CV (PDF) — lien direct</a>
+<div class="cv" style="max-width: 800px; margin: 40px auto; background: #fff; border-radius: 12px; box-shadow: 0 4px 24px rgba(0,0,0,0.08); padding: 32px;">
+    <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 24px; color: #2c3e50;">Mon CV</h2>
+    <p style="text-align: center; font-size: 1.1rem; margin-bottom: 32px;">
+        Vous pouvez télécharger mon CV en cliquant sur le bouton ci-dessous :
     </p>
+    <div style="text-align: center; margin-bottom: 36px;">
+        <a href="{{ asset('CV.pdf') }}" download style="display: inline-block; background: #2980b9; color: #fff; padding: 14px 32px; border-radius: 6px; font-size: 1.1rem; text-decoration: none; transition: background 0.2s;">
+            Télécharger le CV
+        </a>
+    </div>
+    <iframe src="{{ asset('CV.pdf') }}" style="width:100%; height: 1000px; border: 1px solid #e1e1e1; border-radius: 8px;" title="Aperçu du CV"></iframe>
 </div>
 {% endblock %}

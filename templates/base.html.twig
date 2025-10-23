@@ -15,59 +15,182 @@
 </head>
 
 <body>
-    {% block body %}
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+            background: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            background: linear-gradient(90deg, #212529 0%, #343a40 100%);
+            box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 2rem;
+        }
+        .navbar-brand {
+            color: #fff !important;
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: color 0.2s;
+        }
+        .navbar-brand:hover {
+            color: #ffc107 !important;
+            text-decoration: none;
+        }
+        .navbar-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .nav-item {
+            position: relative;
+        }
+        .nav-link {
+            color: #f8f9fa !important;
+            font-size: 1.05rem;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+            cursor: pointer;
+            display: block;
+            text-decoration: none;
+        }
+        .nav-link:hover, .nav-link:focus {
+            background: #495057;
+            color: #ffc107 !important;
+            text-decoration: none;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background: #343a40;
+            border: none;
+            border-radius: 0.5rem;
+            min-width: 180px;
+            margin-top: 0.5rem;
+            box-shadow: 0 4px 16px rgba(44, 62, 80, 0.12);
+            z-index: 2000;
+        }
+        .dropdown-item {
+            color: #f8f9fa;
+            padding: 0.5rem 1.25rem;
+            transition: background 0.2s, color 0.2s;
+            display: block;
+            text-decoration: none;
+        }
+        .dropdown-item:hover, .dropdown-item:focus {
+            background: #495057;
+            color: #ffc107;
+        }
+        .dropdown-toggle::after {
+            content: " ▼";
+            font-size: 0.7em;
+            margin-left: 0.4em;
+            vertical-align: middle;
+        }
+        .nav-item.dropdown.open > .dropdown-menu {
+            display: block;
+        }
+        @media (max-width: 992px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+            .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+            }
+            .nav-link {
+                width: 100%;
+                text-align: left;
+            }
+            .dropdown-menu {
+                position: static;
+                margin-top: 0;
+                box-shadow: none;
+            }
+        }
+        main {
+            max-width: 1100px;
+            margin: 2.5rem auto 0 auto;
+            padding: 2rem;
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 24px rgba(44, 62, 80, 0.10);
+            min-height: 70vh;
+        }
+        .nav-item.dropdown:focus-within > .dropdown-menu,
+        .nav-item.dropdown:hover > .dropdown-menu {
+            display: block;
+        }
+        .nav-item.dropdown:focus-within > .dropdown-toggle,
+        .nav-item.dropdown:hover > .dropdown-toggle {
+            color: #ffc107 !important;
+            background: #495057;
+        }
+    </style>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark">
             <a class="navbar-brand" href="/">Accueil</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/presentation">Présentation</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/competences" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Compétences
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/competences/programmation">Programmation</a></li>
-                            <li><a class="dropdown-item" href="/competences/reseaux">Réseaux</a></li>
-                            <li><a class="dropdown-item" href="/competences/cybersecurite">Cybersécurité</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/experiences">Expériences professionnelles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/projet">Projet professionnel</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="/obtentions" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Obtentions
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/obtentions/certifications">Certifications</a></li>
-                            <li><a class="dropdown-item" href="/obtentions/diplomes">Diplômes</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/cv">CV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/veille">Veille technologique</a>
-                    </li>
-                </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown mx-2" id="dropdown-competences">
+                    <a class="nav-link dropdown-toggle" href="/compétences" id="navbarDropdownCompetences"
+                        role="button" aria-expanded="false">
+                        Compétences
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompetences">
+                        <li><a class="dropdown-item" href="/compétences/programmation">Programmation</a></li>
+                        <li><a class="dropdown-item" href="/compétences/réseaux">Réseaux</a></li>
+                        <li><a class="dropdown-item" href="/compétences/cybersécurité">Cybersécurité</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="/expériences">Expériences professionnelles</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="/projet">Projet professionnel</a>
+                </li>
+                <li class="nav-item dropdown mx-2" id="dropdown-obtentions">
+                    <a class="nav-link dropdown-toggle" href="/obtentions" id="navbarDropdownObtentions" role="button"
+                        aria-expanded="false">
+                        Obtentions
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownObtentions">
+                        <li><a class="dropdown-item" href="/obtentions/certifications">Certifications</a></li>
+                        <li><a class="dropdown-item" href="/obtentions/diplomes">Diplômes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="/veille">Veille technologique</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="/cv">CV</a>
+                </li>
+            </ul>
+        </nav>
 
-            </div>
-        </div>
-    </nav>
-    {% endblock %}
+    </header>
+    <main>{% block body %}{% endblock %}</main>
+   
 </body>
 
 </html>

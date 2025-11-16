@@ -60,7 +60,9 @@
     </style>
     <div class="veille">
         <h1>{{ page_title }}</h1>
-        <p>Voici les dernières actualités sur l'intélligence artificielle:</p>
+        <p>J'ai pris pour thème de la veille : l'IA car c'est un domaine en pleine expansion qui influence de nombreux secteurs 
+            et c'est surtout un sujet qui fait débat actuellement.</p>
+        <p>Voici les dernières actualités sur l'intelligence artificielle:</p>
         {% if feed_items|length > 0 %}
             <ul class="rss-list">
                 {% for item in feed_items|slice(0, 10) %}

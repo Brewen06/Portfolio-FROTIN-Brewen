@@ -1,3 +1,602 @@
+/* app.css - Consolidated styles from templates */
+
+/* Page base */
 body {
     background-color: skyblue;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #17212b;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
+
+/* ----------------------------------------
+   Accueil
+   (templates/index.html.twig)
+   ---------------------------------------- */
+.bienvenue {
+    background: #f5f5f5;
+    border-radius: 12px;
+    padding: 32px 24px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    text-align: center;
+}
+.bienvenue h1 {
+    color: #2c3e50;
+    font-size: 2.2em;
+    margin-bottom: 16px;
+}
+.bienvenue p {
+    color: #444;
+    font-size: 1.15em;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------
+   Compétences - index (menu)
+   (templates/competences/index.html.twig)
+   ---------------------------------------- */
+.competences-menu {
+    max-width: 500px;
+    margin: 48px auto;
+    padding: 32px 28px;
+    background: linear-gradient(135deg, #f9f9f9 80%, #e3eafc 100%);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(44,62,80,0.10);
+}
+.competences-menu h2 {
+    text-align: center;
+    color: #234;
+    margin-bottom: 32px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.competences-menu .btn {
+    display: block;
+    padding: 16px 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: background 0.2s, transform 0.2s;
+}
+.btn--programmation { background: linear-gradient(90deg, #3498db 70%, #6d7bfa 100%); box-shadow: 0 2px 8px rgba(52,152,219,0.10); }
+.btn--reseaux { background: linear-gradient(90deg, #ae3927 70%, #e7986e 100%); box-shadow: 0 2px 8px rgba(39,174,96,0.10); }
+.btn--cyber { background: linear-gradient(90deg, #e68e22 70%, #f9a023 100%); box-shadow: 0 2px 8px rgba(230,126,34,0.10); }
+
+/* ----------------------------------------
+   Compétences - Programmation
+   (templates/competences/programmation.html.twig)
+   ---------------------------------------- */
+.programmation {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+    color: #17212b;
+}
+.programmation h2 {
+    margin: 0 0 14px 0;
+    font-size: 1.6rem;
+    color: #1a73e8;
+    font-weight: 700;
+}
+.programmation .sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+.programmation section {
+    background: #f7f9fc;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.programmation h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.05rem;
+    color: #0f1724;
+    border-left: 4px solid #dbeafe;
+    padding-left: 10px;
+}
+.programmation ul { list-style: none; padding-left: 0; margin: 8px 0 0 0; }
+.programmation > .sections ul > li { margin-bottom: 10px; }
+.programmation li > strong {
+    display: inline-block;
+    background: linear-gradient(180deg, #eef7ff, #ffffff);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #0b3d91;
+    margin-bottom: 6px;
+}
+.programmation li ul {
+    margin-top: 8px;
+    padding-left: 14px;
+    border-left: 2px solid rgba(11,61,145,0.06);
+}
+.programmation li ul li {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+.programmation li ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #1a73e8;
+    font-size: 0.9rem;
+    line-height: 1;
+}
+.programmation li ul li ul {
+    margin-top: 6px;
+    padding-left: 12px;
+    border-left: none;
+}
+
+/* ----------------------------------------
+   Compétences - Réseaux
+   (templates/competences/reseaux.html.twig)
+   ---------------------------------------- */
+.reseau {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+    color: #17212b;
+}
+.reseau h2 {
+    margin: 0 0 14px 0;
+    font-size: 1.6rem;
+    color: #1a73e8;
+    font-weight: 700;
+}
+.reseau ul { list-style: none; padding-left: 0; margin: 8px 0 0 0; }
+.reseau > ul > li,
+.reseau .windows ul > li,
+.reseau .linux ul > li {
+    margin-bottom: 10px;
+    background: #f7f9fc;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.reseau li > strong {
+    display: inline-block;
+    background: linear-gradient(180deg, #eef7ff, #ffffff);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #0b3d91;
+    margin-bottom: 6px;
+}
+.reseau li ul {
+    margin-top: 8px;
+    padding-left: 14px;
+    border-left: 2px solid rgba(11,61,145,0.06);
+}
+.reseau li ul li {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+.reseau li ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #1a73e8;
+    font-size: 0.9rem;
+    line-height: 1;
+}
+.reseau h3 {
+    margin: 12px 0 8px 0;
+    font-size: 1.05rem;
+    color: #0f1724;
+    border-left: 4px solid #dbeafe;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.badge { font-size: 0.75rem; padding: 4px 8px; border-radius: 8px; color: #fff; }
+.bg-primary { background: #1a73e8; }
+.bg-success { background: #16a34a; }
+
+/* ----------------------------------------
+   Compétences - Cybersécurité
+   (templates/competences/cyber.html.twig)
+   ---------------------------------------- */
+.cyber {
+    max-width: 1100px;
+    margin: 24px auto;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(16, 24, 40, 0.06);
+    color: #17212b;
+}
+.cyber h2 {
+    margin: 0 0 14px 0;
+    font-size: 1.6rem;
+    color: #0f766e;
+    font-weight: 700;
+}
+.cyber .sections {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+.cyber section {
+    background: #f7f9fc;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.cyber h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.05rem;
+    color: #0f1724;
+    border-left: 4px solid rgba(15,118,110,0.12);
+    padding-left: 10px;
+}
+.cyber ul { list-style: none; padding-left: 0; margin: 8px 0 0 0; }
+.cyber > .sections ul > li { margin-bottom: 10px; }
+.cyber li > strong {
+    display: inline-block;
+    background: linear-gradient(180deg, #edf7f6, #ffffff);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #075b52;
+    margin-bottom: 6px;
+}
+.cyber li ul {
+    margin-top: 8px;
+    padding-left: 14px;
+    border-left: 2px solid rgba(7,91,82,0.06);
+}
+.cyber li ul li {
+    position: relative;
+    padding-left: 12px;
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+}
+.cyber li ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #0f766e;
+    font-size: 0.9rem;
+    line-height: 1;
+}
+.cyber li ul li ul {
+    margin-top: 6px;
+    padding-left: 12px;
+    border-left: none;
+}
+
+/* ----------------------------------------
+   Expériences
+   (templates/experience/index.html.twig)
+   ---------------------------------------- */
+.experiences {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.experiences h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 0 0 1.25rem 0;
+}
+.experiences section h2 {
+    font-size: 1.7rem;
+    margin-bottom: 1.2rem;
+}
+.experiences .stages h2 { color: #2980b9; border-bottom: 2px solid #2980b9; padding-bottom: .3rem; }
+.experiences .travail h2 { color: #27ae60; border-bottom: 2px solid #27ae60; padding-bottom: .3rem; }
+.experiences ul { list-style: none; padding: 0; margin: 0; }
+.experiences article {
+    background: #f4f8fb;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+}
+
+/* ----------------------------------------
+   Projet professionnel
+   (templates/projet/index.html.twig)
+   ---------------------------------------- */
+.projet {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.projet h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin: 0;
+}
+.projet .projet_intro {
+    font-size: 1.15rem;
+    color: #444;
+    margin-bottom: 2rem;
+}
+.projet .projet_contenu {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.projet .projet_contenu h2 { color: #2980b9; font-size: 1.4rem; margin-top: 0; }
+.projet .projet_contenu ul { list-style: disc inside; padding-left: 1rem; color: #333; font-size: 1.05rem; }
+
+/* ----------------------------------------
+   Obtentions (menu)
+   (templates/obtentions/index.html.twig)
+   ---------------------------------------- */
+.obtentions-menu {
+    max-width: 500px;
+    margin: 48px auto;
+    padding: 32px 28px;
+    background: linear-gradient(135deg, #f9f9f9 80%, #e3eafc 100%);
+    border-radius: 18px;
+    box-shadow: 0 6px 24px rgba(44,62,80,0.10);
+}
+.obtentions-menu h2 {
+    text-align: center;
+    color: #234;
+    margin-bottom: 32px;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+.obtentions-menu a {
+    display: block;
+    padding: 16px 0;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: background 0.2s, transform 0.2s;
+}
+.obtentions-menu a:first-child { background: linear-gradient(90deg, #5b44ad 70%, #6055c0 100%); box-shadow: 0 2px 8px rgba(142,68,173,0.10); }
+.obtentions-menu a:last-child { background: linear-gradient(90deg, #e62222 70%, #f92323 100%); box-shadow: 0 2px 8px rgba(230,126,34,0.10); }
+
+/* ----------------------------------------
+   Certifications
+   (templates/obtentions/certifications.html.twig)
+   ---------------------------------------- */
+.certifications-section {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px;
+}
+.certifications-section .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.certification-group { margin-bottom: 32px; }
+.certification-group .school-title {
+    font-size: 1.3rem;
+    color: #2980b9;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.certification-list { list-style: none; padding: 0; margin: 0; }
+.certification-list li { margin-bottom: 10px; display: flex; align-items: center; }
+.certification-button {
+    background: #eaf6fb;
+    color: #2980b9;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-weight: 500;
+    margin-right: 12px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+.certification-list .year { color: #7f8c8d; font-size: 0.98rem; margin-right: 10px; }
+.certification-desc { color: #16a085; font-size: 0.98rem; }
+
+/* ----------------------------------------
+   Diplômes
+   (templates/obtentions/diplomes.html.twig)
+   ---------------------------------------- */
+.diplomes-section {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px;
+}
+.diplomes-section .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 32px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.diplome-group { margin-bottom: 32px; }
+.diplome-group .school-title {
+    font-size: 1.3rem;
+    color: #2980b9;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+.diplome-list { list-style: none; padding: 0; margin: 0; }
+.diplome-list li { margin-bottom: 10px; display: flex; align-items: center; }
+.diplome-list li span { background: #eaf6fb; color: #2980b9; border-radius: 6px; padding: 6px 12px; font-weight: 500; margin-right: 12px; }
+.diplome-year { color: #7f8c8d; font-size: 0.98rem; }
+.diplome-mention { color: #16a085; font-size: 0.98rem; margin-right: 10px; }
+
+
+/* ----------------------------------------
+   Veille
+   (templates/veille/index.html.twig)
+   ---------------------------------------- */
+.veille {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+.veille h1 {
+    font-size: 2rem;
+    margin-bottom: 24px;
+    color: #2c3e50;
+    text-align: center;
+}
+.rss-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.rss-list li {
+    margin-bottom: 18px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: #f7f9fa;
+    transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.rss-list li:hover { background: #e3eaf2; }
+.rss-list strong {
+    color: #2980b9;
+    min-width: 90px;
+    display: inline-block;
+    font-size: 1rem;
+}
+.rss-list a {
+    color: #34495e;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.rss-list a:hover { color: #1abc9c; text-decoration: underline; }
+.veille p.error { color: #c0392b; text-align: center; margin-top: 32px; }
+
+/* ----------------------------------------
+   CV
+   (templates/cv/index.html.twig)
+   ---------------------------------------- */
+.cv {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px;
+}
+.cv h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+    color: #2c3e50;
+}
+.cv p { text-align: center; font-size: 1.1rem; margin-bottom: 32px; color: #444; }
+.cv .download-btn {
+    display: inline-block;
+    background: #2980b9;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.cv iframe {
+    width: 100%;
+    height: 1000px;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+}
+
+/* ----------------------------------------
+   Contact
+   (templates/contact/index.html.twig)
+   ---------------------------------------- */
+.contact {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.contact h1 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    text-align: center;
+    letter-spacing: 1px;
+}
+.contact article {
+    background: #f4f8fb;
+    border-radius: 8px;
+    padding: 1rem 1.5rem;
+    text-align: center;
+}
+.contact h2 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.contact address { color: #555; font-style: normal; }
+.contact a { color: inherit; text-decoration: underline; }
+
+/* ----------------------------------------
+   Responsive tweaks shared
+   ---------------------------------------- */
+@media (max-width: 520px) {
+    .cyber, .programmation, .reseau {
+        padding: 16px;
+    }
+    .cyber h2, .programmation h2, .reseau h2 {
+        font-size: 1.3rem;
+    }
+    .bienvenue { padding: 20px; }
+}
+
+/* small utility */
+.text-center { text-align: center; }

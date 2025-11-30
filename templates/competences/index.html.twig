@@ -3,21 +3,21 @@
 {% block title %}Compétences{% endblock %}
 
 {% block body %}
-<div style="max-width: 500px; margin: 48px auto; padding: 32px 28px; background: linear-gradient(135deg, #f9f9f9 80%, #e3eafc 100%); border-radius: 18px; box-shadow: 0 6px 24px rgba(44,62,80,0.10);">
-    <h2 style="text-align: center; color: #234; margin-bottom: 32px; font-size: 2rem; letter-spacing: 1px; font-weight: 700;">Mes compétences :</h2>
-    <ul style="list-style: none; padding: 0; margin: 0;">
+<div class="competences-menu">
+    <h2>Mes compétences :</h2>
+    <ul style="list-style: none; padding: 0;">
         <li style="margin-bottom: 20px;">
-            <a href="{{ path('app_competences_programmation') }}" style="display: block; padding: 16px 0; background: linear-gradient(90deg, #3498db 70%, #6d7bfa 100%); color: #fff; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(52,152,219,0.10); transition: background 0.2s, transform 0.2s;">
+            <a href="{{ path('app_competences_programmation') }}" class="btn btn--programmation">
                 Programmation
             </a>
         </li>
         <li style="margin-bottom: 20px;">
-            <a href="{{ path('app_competences_reseaux') }}" style="display: block; padding: 16px 0; background: linear-gradient(90deg, #ae3927 70%, #e7986e 100%); color: #fff; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(39,174,96,0.10); transition: background 0.2s, transform 0.2s;">
+            <a href="{{ path('app_competences_reseaux') }}" class="btn btn--reseaux">
                 Réseaux
             </a>
         </li>
         <li>
-            <a href="{{ path('app_competences_cyber') }}" style="display: block; padding: 16px 0; background: linear-gradient(90deg, #e68e22 70%, #f9a023 100%); color: #fff; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(230,126,34,0.10); transition: background 0.2s, transform 0.2s;">
+            <a href="{{ path('app_competences_cyber') }}" class="btn btn--cyber">
                 Cybersécurité
             </a>
         </li>

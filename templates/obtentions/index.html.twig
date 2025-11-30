@@ -3,16 +3,16 @@
 {% block title %}Obtentions{% endblock %}
 
 {% block body %}
-<div style="max-width: 500px; margin: 48px auto; padding: 32px 28px; background: linear-gradient(135deg, #f9f9f9 80%, #e3eafc 100%); border-radius: 18px; box-shadow: 0 6px 24px rgba(44,62,80,0.10);">
-    <h2 style="text-align: center; color: #234; margin-bottom: 32px; font-size: 2rem; letter-spacing: 1px; font-weight: 700;">Mes obtentions :</h2>
-    <ul style="list-style: none; padding: 0; margin: 0;">
-        <li style="margin-bottom: 20px;">
-            <a href="{{ path('app_obtentions_diplomes') }}" style="display: block; padding: 16px 0; background: linear-gradient(90deg, #5b44ad 70%, #6055c0 100%); color: #fff; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(142,68,173,0.10); transition: background 0.2s, transform 0.2s;">
+<div class="obtention-container">
+    <h2 class="obtention-title">Mes obtentions :</h2>
+    <ul class="obtention-list">
+        <li class="obtention-item">
+            <a href="{{ path('app_obtentions_diplomes') }}" class="obtention-link">
                 Diplômes
             </a>
         </li>
-        <li>
-            <a href="{{ path('app_obtentions_certifications') }}" style="display: block; padding: 16px 0; background: linear-gradient(90deg, #e62222 70%, #f92323 100%); color: #fff; text-align: center; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1.1rem; box-shadow: 0 2px 8px rgba(230,126,34,0.10); transition: background 0.2s, transform 0.2s;">
+        <li class="obtention-item">
+            <a href="{{ path('app_obtentions_certifications') }}" class="obtention-link">
                 Certifications
             </a>
         </li>

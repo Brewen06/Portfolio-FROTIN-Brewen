@@ -11,7 +11,7 @@ final class VeilleController extends AbstractController
     #[Route('/veille', name: 'app_veille')]
     public function index(): Response
     {
-        $rss_url = 'https://api.rss2json.com/v1/api.json?rss_url=https://www.actuia.com/feed/';
+        $rss_url = 'https://api.rss2json.com/v1/api.json?rss_url=https://www.lemondeinformatique.fr/flux-rss/thematique/intelligence-artificielle/rss.xml';
         $feed_items = [];
 
         $response = file_get_contents($rss_url);

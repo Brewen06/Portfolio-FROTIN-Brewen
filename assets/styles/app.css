@@ -713,14 +713,14 @@ h2 {
 }
 
 /* Grille de Sections */
-.sections, .reseau, .cyber {
+.sections {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 2rem;
 }
 
 /* Cartes de Compétences */
-.programmation section, .reseau section, .cyber section, .windows, .linux {
+.programmation section, .reseau section, .cyber section {
     background: white;
     border-radius: var(--radius-lg);
     padding: 2rem;
@@ -738,7 +738,7 @@ h2 {
 
 /* Couleurs spécifiques par domaine */
 .programmation section { border-top-color: var(--color-primary); }
-.reseau section, .windows, .linux { border-top-color: var(--color-accent-net); }
+.reseau section { border-top-color: var(--color-accent-net); }
 .cyber section { border-top-color: var(--color-accent-cyber); }
 
 /* Titres de Cartes */
@@ -758,6 +758,11 @@ h2 {
 .fondamentaux h3::before { content: '🔒'; }
 .attaques h3::before { content: '🛡️'; }
 .windows h3::before { content: '🪟'; }
+.linux h3::before { content: '🐧'; }
+.general h3::before { content: '⚙️'; }
+.outils h3::before { content: '🛠️'; }
+.BD h3::before { content: '🗄️'; }
+.GIT h3::before { content: '🐙'; }
 
 /* Liste Principale (Compétences Clés) */
 .programmation > ul, .reseau > ul, .cyber > ul, 
@@ -817,6 +822,8 @@ h2 {
     margin-left: 0.5rem;
 }
 .bg-primary { background-color: #007bff; }
+.bg-secondary { background-color: #6c757d; }
+.bg-success { background-color: #28a745; }
 
 /* ===== Footer ===== */
 footer {

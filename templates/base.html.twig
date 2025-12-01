@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Welcome!{% endblock %}</title>
-    <link rel="icon"
-        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    
-        {% block stylesheets %}
-        <link href="/style/app.css" rel="stylesheet">
+
+    {% block stylesheets %}
     {% endblock %}
 
     {% block javascripts %}
@@ -18,46 +15,61 @@
 </head>
 
 <body>
-    <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <a class="navbar-brand" href="/">Accueil</a>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown mx-2" id="dropdown-competences">
-                    <a class="nav-link dropdown-toggle" href="/compétences" id="navbarDropdownCompetences"
-                        role="button" aria-expanded="false">
+    <header class="bg-gray-800 text-white shadow-md">
+        <nav class="container mx-auto flex flex-wrap items-center justify-between p-4">
+            <a class="text-xl font-bold hover:text-gray-300" href="/">Accueil</a>
+
+            <ul class="flex flex-col md:flex-row md:space-x-6 mt-4 md:mt-0 ml-auto items-center">
+                <li class="relative group mx-2" id="dropdown-competences">
+                    <button class="flex items-center hover:text-gray-300 focus:outline-none"
+                        id="navbarDropdownCompetences" aria-expanded="false">
                         Compétences
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompetences">
-                        <li><a class="dropdown-item" href="/compétences/programmation">Programmation</a></li>
-                        <li><a class="dropdown-item" href="/compétences/réseaux">Réseaux</a></li>
-                        <li><a class="dropdown-item" href="/compétences/cybersécurité">Cybersécurité</a></li>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-10"
+                        aria-labelledby="navbarDropdownCompetences">
+                        <li><a class="block px-4 py-2 hover:bg-gray-100"
+                                href="/compétences/programmation">Programmation</a></li>
+                        <li><a class="block px-4 py-2 hover:bg-gray-100" href="/compétences/réseaux">Réseaux</a></li>
+                        <li><a class="block px-4 py-2 hover:bg-gray-100"
+                                href="/compétences/cybersécurité">Cybersécurité</a></li>
                     </ul>
                 </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="/expériences">Expériences professionnelles</a>
+                <li class="mx-2">
+                    <a class="hover:text-gray-300" href="/expériences">Expériences professionnelles</a>
                 </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="/projet">Projet professionnel</a>
+                <li class="mx-2"></li>
+                <a class="hover:text-gray-300" href="/projet">Projet professionnel</a>
                 </li>
-                <li class="nav-item dropdown mx-2" id="dropdown-obtentions">
-                    <a class="nav-link dropdown-toggle" href="/obtentions" id="navbarDropdownObtentions" role="button"
-                        aria-expanded="false">
+                <li class="relative group mx-2" id="dropdown-obtentions">
+                    <button class="flex items-center hover:text-gray-300 focus:outline-none"
+                        id="navbarDropdownObtentions" aria-expanded="false">
                         Obtentions
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownObtentions">
-                        <li><a class="dropdown-item" href="/obtentions/certifications">Certifications</a></li>
-                        <li><a class="dropdown-item" href="/obtentions/diplomes">Diplômes</a></li>
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <ul class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg hidden group-hover:block z-10"
+                        aria-labelledby="navbarDropdownObtentions">
+                        <li><a class="block px-4 py-2 hover:bg-gray-100"
+                                href="/obtentions/certifications">Certifications</a></li>
+                        <li><a class="block px-4 py-2 hover:bg-gray-100" href="/obtentions/diplomes">Diplômes</a></li>
                     </ul>
                 </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="/veille">Veille technologique</a>
+                <li class="mx-2">
+                    <a class="hover:text-gray-300" href="/veille">Veille technologique</a>
                 </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="/cv">CV</a>
+                <li class="mx-2">
+                    <a class="hover:text-gray-300" href="/cv">CV</a>
                 </li>
             </ul>
         </nav>
-
     </header>
     <main>{% block body %}{% endblock %}</main>
     <footer>

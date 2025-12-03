@@ -4,17 +4,17 @@
 
 {% block body %}
     
-    <div class="veille">
-        <h1>{{ page_title }}</h1>
-        <p>J'ai pris pour thème de la veille : l'IA car c'est un domaine en pleine expansion qui influence de nombreux secteurs 
+    <div class="bg-white rounded-2xl p-10 shadow-md border border-white/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <h1 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-slate-900 to-blue-600 bg-clip-text text-transparent">{{ page_title }}</h1>
+        <p class="text-lg text-slate-700 mb-4">J'ai pris pour thème de la veille : l'IA car c'est un domaine en pleine expansion qui influence de nombreux secteurs 
             et c'est surtout un sujet qui fait débat actuellement.</p><br>
-        <p>Voici les dernières actualités sur l'intelligence artificielle:</p>
+        <p class="text-lg text-slate-700 mb-4">Voici les dernières actualités sur l'intelligence artificielle:</p>
         {% if feed_items|length > 0 %}
-            <ul class="rss-list">
+            <ul class="grid grid-cols-[repeat(auto-fill,minmax(280px,1fr))] gap-6 p-0 list-none">
                 {% for item in feed_items|slice(0, 10) %}
-                    <li>
-                        <strong>{{ item.pubDate|date("d/m/Y") }}</strong> :
-                        <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+                    <li class="bg-white p-6 rounded-lg border-l-4 border-red-500 shadow-sm transition-transform duration-200 hover:translate-x-1 hover:bg-red-50">
+                        <strong class="block text-slate-500 text-sm mb-2 uppercase tracking-wide">{{ item.pubDate|date("d/m/Y") }}</strong> :
+                        <a class="font-semibold text-lg text-slate-900 leading-snug hover:text-red-500 hover:underline no-underline" href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
                     </li>
                 {% endfor %}
             </ul>

@@ -3,16 +3,16 @@
 {% block title %}Obtentions{% endblock %}
 
 {% block body %}
-<div class="obtention-container">
-    <h2 class="obtention-title">Mes obtentions :</h2>
-    <ul class="obtention-list">
-        <li class="obtention-item">
-            <a href="{{ path('app_obtentions_diplomes') }}" class="obtention-link">
+<div class="text-center">
+    <h2 class="text-3xl font-bold mb-6 border-l-[5px] border-blue-600 pl-4 text-slate-900 inline-block">Mes obtentions :</h2>
+    <ul class="flex flex-wrap justify-center gap-8 mt-8 p-0 list-none">
+        <li class="w-full max-w-[400px]">
+            <a href="{{ path('app_obtentions_diplomes') }}" class="flex items-center justify-center w-full py-5 px-8 font-sans text-lg font-semibold uppercase tracking-wide text-white bg-gradient-to-br from-slate-600 to-slate-700 rounded-full border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl no-underline">
                 Diplômes
             </a>
         </li>
-        <li class="obtention-item">
-            <a href="{{ path('app_obtentions_certifications') }}" class="obtention-link">
+        <li class="w-full max-w-[400px]">
+            <a href="{{ path('app_obtentions_certifications') }}" class="flex items-center justify-center w-full py-5 px-8 font-sans text-lg font-semibold uppercase tracking-wide text-white bg-gradient-to-br from-slate-600 to-slate-700 rounded-full border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl no-underline">
                 Certifications
             </a>
         </li>

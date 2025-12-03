@@ -8,61 +8,115 @@
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     
-        {% block stylesheets %}
-        <link href="/style/app.css" rel="stylesheet">
-    {% endblock %}
+    {# <link href="/style/app.css" rel="stylesheet"> #}
 
     {% block javascripts %}
     {% block importmap %}{{ importmap('app') }}{% endblock %}
     {% endblock %}
 </head>
 
-<body>
-    <header class="site-header">
-        <nav class="navbar navbar-expand-md navbar-dark">
-            <a class="navbar-brand" href="/">Accueil</a>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown mx-2" id="dropdown-competences">
-                    <a class="nav-link dropdown-toggle" href="/compétences" id="navbarDropdownCompetences"
+<body class="font-sans bg-[#f0f2f5] text-slate-800 min-h-screen flex flex-col overflow-x-hidden">
+    <header class="bg-slate-900 text-white h-[80px] sticky top-0 z-[1000] shadow-lg flex items-center">
+        <nav class="w-full max-w-[1200px] mx-auto px-4 md:px-8 flex justify-between items-center">
+            <a class="text-2xl font-extrabold tracking-tighter bg-gradient-to-br from-white to-slate-400 bg-clip-text text-transparent no-underline transition-colors duration-200" href="/">Accueil</a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex gap-8 items-center m-0 list-none">
+                <li class="relative h-full flex items-center group mx-2" id="dropdown-competences">
+                    <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/compétences" id="navbarDropdownCompetences"
                         role="button" aria-expanded="false">
                         Compétences
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownCompetences">
-                        <li><a class="dropdown-item" href="/compétences/programmation">Programmation</a></li>
-                        <li><a class="dropdown-item" href="/compétences/réseaux">Réseaux</a></li>
-                        <li><a class="dropdown-item" href="/compétences/cybersécurité">Cybersécurité</a></li>
+                    <ul class="absolute top-full left-1/2 -translate-x-1/2 translate-y-2 bg-white border border-slate-200 rounded-lg shadow-xl p-2 min-w-[220px] w-max opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-4 transition-all duration-200 z-[1001] before:content-[''] before:absolute before:top-[-6px] before:left-1/2 before:-translate-x-1/2 before:rotate-45 before:w-3 before:h-3 before:bg-white before:border-t before:border-l before:border-slate-200" aria-labelledby="navbarDropdownCompetences">
+                        <li><a class="block px-4 py-3 text-slate-800 text-sm rounded transition-colors duration-200 whitespace-nowrap hover:bg-slate-100 hover:text-blue-600 no-underline" href="/compétences/programmation">Programmation</a></li>
+                        <li><a class="block px-4 py-3 text-slate-800 text-sm rounded transition-colors duration-200 whitespace-nowrap hover:bg-slate-100 hover:text-blue-600 no-underline" href="/compétences/réseaux">Réseaux</a></li>
+                        <li><a class="block px-4 py-3 text-slate-800 text-sm rounded transition-colors duration-200 whitespace-nowrap hover:bg-slate-100 hover:text-blue-600 no-underline" href="/compétences/cybersécurité">Cybersécurité</a></li>
                     </ul>
                 </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="/expériences">Expériences professionnelles</a>
+                <li class="relative h-full flex items-center group mx-2">
+                    <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/expériences">Expériences professionnelles</a>
                 </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="/projet">Projet professionnel</a>
+                <li class="relative h-full flex items-center group mx-2">
+                    <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/projet">Projet professionnel</a>
                 </li>
-                <li class="nav-item dropdown mx-2" id="dropdown-obtentions">
-                    <a class="nav-link dropdown-toggle" href="/obtentions" id="navbarDropdownObtentions" role="button"
+                <li class="relative h-full flex items-center group mx-2" id="dropdown-obtentions">
+                    <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/obtentions" id="navbarDropdownObtentions" role="button"
                         aria-expanded="false">
                         Obtentions
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownObtentions">
-                        <li><a class="dropdown-item" href="/obtentions/certifications">Certifications</a></li>
-                        <li><a class="dropdown-item" href="/obtentions/diplomes">Diplômes</a></li>
+                    <ul class="absolute top-full left-1/2 -translate-x-1/2 translate-y-2 bg-white border border-slate-200 rounded-lg shadow-xl p-2 min-w-[220px] w-max opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-4 transition-all duration-200 z-[1001] before:content-[''] before:absolute before:top-[-6px] before:left-1/2 before:-translate-x-1/2 before:rotate-45 before:w-3 before:h-3 before:bg-white before:border-t before:border-l before:border-slate-200" aria-labelledby="navbarDropdownObtentions">
+                        <li><a class="block px-4 py-3 text-slate-800 text-sm rounded transition-colors duration-200 whitespace-nowrap hover:bg-slate-100 hover:text-blue-600 no-underline" href="/obtentions/certifications">Certifications</a></li>
+                        <li><a class="block px-4 py-3 text-slate-800 text-sm rounded transition-colors duration-200 whitespace-nowrap hover:bg-slate-100 hover:text-blue-600 no-underline" href="/obtentions/diplomes">Diplômes</a></li>
                     </ul>
                 </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="/veille">Veille technologique</a>
+                <li class="relative h-full flex items-center group mx-2">
+                    <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/veille">Veille technologique</a>
                 </li>
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="/cv">CV</a>
+                <li class="relative h-full flex items-center group mx-2">
+                    <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/cv">CV</a>
                 </li>
             </ul>
         </nav>
 
+        <div id="mobile-menu" class="fixed inset-0 bg-slate-900/95 z-[2000] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center">
+            <button id="close-menu-btn" class="absolute top-6 right-6 text-white focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <ul class="flex flex-col gap-6 items-center list-none p-0 w-full">
+                <li><a class="text-2xl font-bold text-white hover:text-blue-400 transition-colors" href="/">Accueil</a></li>
+                <li class="w-full text-center">
+                    <details class="group">
+                        <summary class="text-2xl font-bold text-white hover:text-blue-400 transition-colors cursor-pointer list-none">Compétences</summary>
+                        <ul class="mt-4 flex flex-col gap-3 bg-white/10 py-4 w-full">
+                            <li><a class="text-lg text-white/80 hover:text-white" href="/compétences/programmation">Programmation</a></li>
+                            <li><a class="text-lg text-white/80 hover:text-white" href="/compétences/réseaux">Réseaux</a></li>
+                            <li><a class="text-lg text-white/80 hover:text-white" href="/compétences/cybersécurité">Cybersécurité</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a class="text-2xl font-bold text-white hover:text-blue-400 transition-colors" href="/expériences">Expériences</a></li>
+                <li><a class="text-2xl font-bold text-white hover:text-blue-400 transition-colors" href="/projet">Projet</a></li>
+                <li class="w-full text-center">
+                    <details class="group">
+                        <summary class="text-2xl font-bold text-white hover:text-blue-400 transition-colors cursor-pointer list-none">Obtentions</summary>
+                        <ul class="mt-4 flex flex-col gap-3 bg-white/10 py-4 w-full">
+                            <li><a class="text-lg text-white/80 hover:text-white" href="/obtentions/certifications">Certifications</a></li>
+                            <li><a class="text-lg text-white/80 hover:text-white" href="/obtentions/diplomes">Diplômes</a></li>
+                        </ul>
+                    </details>
+                </li>
+                <li><a class="text-2xl font-bold text-white hover:text-blue-400 transition-colors" href="/veille">Veille</a></li>
+                <li><a class="text-2xl font-bold text-white hover:text-blue-400 transition-colors" href="/cv">CV</a></li>
+            </ul>
+        </div>
     </header>
-    <main>{% block body %}{% endblock %}</main>
-    <footer>
-        <p>&copy; {{ "now"|date("Y") }} Brewen. Tous droits réservés. | <a href="/contact">Contact</a></p>
+    <main class="flex-1 w-full max-w-[1200px] mx-auto my-8 md:my-12 px-4 md:px-8">{% block body %}{% endblock %}</main>
+    <footer class="bg-slate-900 text-slate-400 text-center py-12 mt-auto">
+        <p>&copy; {{ "now"|date("Y") }} Brewen. Tous droits réservés. | <a class="text-white border-b border-dotted border-slate-400 hover:text-blue-600 hover:border-solid transition-colors duration-200 no-underline" href="/contact">Contact</a></p>
     </footer>
+
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const closeMenuBtn = document.getElementById('close-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function toggleMenu() {
+            mobileMenu.classList.toggle('translate-x-full');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        closeMenuBtn.addEventListener('click', toggleMenu);
+    </script>
 </body>
 
 </html>

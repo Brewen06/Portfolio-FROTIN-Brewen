@@ -3,28 +3,28 @@
 {% block title %}Certifications{% endblock %}
 
 {% block body %}
-<section class="certifications-section"></section>
-    <h2 class="section-title"></h2>
+<section class="flex flex-col gap-8 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 border-l-[5px] border-blue-600 pl-4 text-slate-900 inline-block">
         Certifications
     </h2>
-    <div class="certification-group">
-        <h3 class="school-title">
+    <div class="bg-white rounded-2xl p-8 shadow-md border-l-[5px] border-blue-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+        <h3 class="text-2xl text-slate-900 mb-6 border-b border-slate-200 pb-2">
             Lycée Notre Dame de La Providence, Avranches
         </h3>
-        <ul class="certification-list">
-            <li>
-                <a href="/attestation-ANSSI.pdf" class="certification-button" target="_blank" rel="noopener noreferrer">
+        <ul class="p-0 list-none">
+            <li class="flex flex-wrap justify-between items-center p-4 bg-slate-50 rounded-lg mb-4 border border-slate-200 last:mb-0">
+                <a href="/attestation-ANSSI.pdf" class="flex items-center gap-2 text-blue-600 font-bold no-underline transition-colors duration-200 hover:text-blue-800 hover:underline before:content-['📜']" target="_blank" rel="noopener noreferrer">
                     <strong>ANSSI</strong>
                 </a>
-                <span class="year">2025</span>
-                <span class="certification-desc">Attestation de sensibilisation à la cybersécurité délivrée par l'ANSSI.</span>
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2025</span>
+                <span class="block w-full mt-2 text-sm text-slate-500">Attestation de sensibilisation à la cybersécurité délivrée par l'ANSSI.</span>
             </li>
-            <li>
-                <span class="certification-name">
+            <li class="flex flex-wrap justify-between items-center p-4 bg-slate-50 rounded-lg mb-4 border border-slate-200 last:mb-0">
+                <span class="font-bold text-lg text-slate-900">
                     <strong>Voltaire</strong>
                 </span>
-                <span class="year">2025</span>
-                <span class="certification-desc">Certification de maîtrise de la langue française (Projet Voltaire).</span>
+                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2025</span>
+                <span class="block w-full mt-2 text-sm text-slate-500">Certification de maîtrise de la langue française (Projet Voltaire).</span>
             </li>
         </ul>
     </div>

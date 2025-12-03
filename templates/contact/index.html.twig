@@ -3,38 +3,38 @@
 {% block title %}Contact{% endblock %}
 
 {% block body %}
-<section class="contact" role="region" aria-labelledby="contact-title"></section>
-    <header class="contact_titre">
-        <h1 id="contact-title">Contact</h1>
+<section class="max-w-4xl mx-auto" role="region" aria-labelledby="contact-title">
+    <header class="text-center mb-8">
+        <h1 id="contact-title" class="text-4xl font-bold text-center mb-8 bg-gradient-to-r from-slate-900 to-blue-600 bg-clip-text text-transparent">Contact</h1>
     </header>
-    <p>
+    <p class="text-center text-lg text-slate-700 mb-12">
         Si mon profil vous intéresse, vous pouvez me contacter par :
     </p>
-    <ul>
+    <ul class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 p-0 list-none">
         <li>
-            <article>
-                <h2>Adresse postale</h2>
-                <address>
+            <article class="bg-white rounded-2xl p-8 shadow-md border border-white/50 h-full flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <h2 class="text-2xl text-blue-600 mb-6">Adresse postale</h2>
+                <address class="not-italic text-slate-500 text-lg">
                     1576, Route des Aubrils, Mortain, La Grande Noé<br>
                     50140 Mortain-Bocage
                 </address>
             </article>
         </li>
         <li>
-            <article>
-                <h2>Adresses e‑mail</h2>
-                <ul>
-                    <li><span>Outlook :</span> <a href="mailto:brewen2006@outlook.fr">brewen2006@outlook.fr</a></li>
-                    <li><span>Infomaniak :</span> <a href="mailto:brewen68@ik.me">brewen68@ik.me</a></li>
+            <article class="bg-white rounded-2xl p-8 shadow-md border border-white/50 h-full flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <h2 class="text-2xl text-blue-600 mb-6">Adresses e‑mail</h2>
+                <ul class="list-none p-0">
+                    <li class="text-slate-500 text-lg mb-2"><span class="font-semibold text-slate-700">Outlook :</span> <a class="text-slate-800 font-semibold px-2 py-1 rounded transition-colors duration-200 hover:bg-blue-50 hover:text-blue-600 no-underline" href="mailto:brewen2006@outlook.fr">brewen2006@outlook.fr</a></li>
+                    <li class="text-slate-500 text-lg"><span class="font-semibold text-slate-700">Infomaniak :</span> <a class="text-slate-800 font-semibold px-2 py-1 rounded transition-colors duration-200 hover:bg-blue-50 hover:text-blue-600 no-underline" href="mailto:brewen68@ik.me">brewen68@ik.me</a></li>
                 </ul>
             </article>
         </li>
         <li>
-            <article>
-                <h2>Téléphones</h2>
-                <ul>
-                    <li><span>Portable :</span> <a href="tel:+33767193852">07 67 19 38 52</a></li>
-                    <li><span>Fixe :</span> <a href="tel:+33233499450">02 33 49 94 50</a></li>
+            <article class="bg-white rounded-2xl p-8 shadow-md border border-white/50 h-full flex flex-col items-center text-center transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+                <h2 class="text-2xl text-blue-600 mb-6">Téléphones</h2>
+                <ul class="list-none p-0">
+                    <li class="text-slate-500 text-lg mb-2"><span class="font-semibold text-slate-700">Portable :</span> <a class="text-slate-800 font-semibold px-2 py-1 rounded transition-colors duration-200 hover:bg-blue-50 hover:text-blue-600 no-underline" href="tel:+33767193852">07 67 19 38 52</a></li>
+                    <li class="text-slate-500 text-lg"><span class="font-semibold text-slate-700">Fixe :</span> <a class="text-slate-800 font-semibold px-2 py-1 rounded transition-colors duration-200 hover:bg-blue-50 hover:text-blue-600 no-underline" href="tel:+33233499450">02 33 49 94 50</a></li>
                 </ul>
             </article>
         </li>

@@ -3,74 +3,74 @@
 {% block title %}Compétences en cybersécurité{% endblock %}
 
 {% block body %}
-<div class="cyber">
+<div class="flex flex-col gap-12">
     
-    <h2>Compétences en cybersécurité</h2>
+    <h2 class="text-center text-4xl mb-8 relative inline-block self-center after:content-[''] after:block after:w-20 after:h-1 after:bg-red-500 after:mx-auto after:mt-2 after:rounded-sm">Compétences en cybersécurité</h2>
 
-    <div class="sections">
-        <section class="fondamentaux">
-            <h3>Cryptographie & encodage</h3>
-            <ul>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
+        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-red-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['🔒']">Cryptographie & encodage</h3>
+            <ul class="list-none p-0 flex flex-col gap-6">
                 <li>
-                    <strong>Clé privée / clé publique</strong>
-                    <ul>
-                        <li>Cryptographie asymétrique pour sécuriser échanges et signatures</li>
-                        <li>Gestion de clés (stockage, rotation, export/import)</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Clé privée / clé publique</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-red-500 before:font-bold">Cryptographie asymétrique pour sécuriser échanges et signatures</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-red-500 before:font-bold">Gestion de clés (stockage, rotation, export/import)</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Codage Base64</strong>
-                    <ul>
-                        <li>Encodage/décodage pour transit sécurisé et transmission de binaires</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Codage Base64</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-red-500 before:font-bold">Encodage/décodage pour transit sécurisé et transmission de binaires</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Hachage & mots de passe</strong>
-                    <ul>
-                        <li>Hachage irréversible (salage, fonctions robustes) pour stockage sécurisé</li>
-                        <li>Compréhension des limites du simple Base64 pour la sécurité</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Hachage & mots de passe</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-red-500 before:font-bold">Hachage irréversible (salage, fonctions robustes) pour stockage sécurisé</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-red-500 before:font-bold">Compréhension des limites du simple Base64 pour la sécurité</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Chiffrement symétrique</strong>
-                    <ul>
-                        <li>Chiffrement réversible pour protéger données sensibles en transit et au repos</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Chiffrement symétrique</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-red-500 before:font-bold">Chiffrement réversible pour protéger données sensibles en transit et au repos</li>
                     </ul>
                 </li>
             </ul>
         </section>
 
-        <section class="attaques">
-            <h3>Attaques & vecteurs</h3>
-            <ul>
+        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-red-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['🛡️']">Attaques & vecteurs</h3>
+            <ul class="list-none p-0 flex flex-col gap-6">
                 <li>
-                    <strong>Man In The Middle (MITM)</strong>
-                    <ul>
-                        <li>Interception et altération des communications; mitigation par TLS et authentification mutuelle</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Man In The Middle (MITM)</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-red-500 before:font-bold">Interception et altération des communications; mitigation par TLS et authentification mutuelle</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>XSS & CSRF</strong>
-                    <ul>
-                        <li>Protection contre injections de scripts et falsification de requêtes (CSP, validation, tokens)</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">XSS & CSRF</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-red-500 before:font-bold">Protection contre injections de scripts et falsification de requêtes (CSP, validation, tokens)</li>
                     </ul>
                 </li>
             </ul>
         </section>
 
-        <section class="outils">
-            <h3>Outils & intégration</h3>
-            <ul>
+        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-red-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['🛠️']">Outils & intégration</h3>
+            <ul class="list-none p-0 flex flex-col gap-6">
                 <li>
-                    <strong>QRCode & codes-barres</strong>
-                    <ul>
-                        <li>Génération, validation et cas d'usage (authentification, suivi)</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">QRCode & codes-barres</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-red-500 before:font-bold">Génération, validation et cas d'usage (authentification, suivi)</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Reconnaissance faciale</strong>
-                    <ul>
-                        <li>Techniques d'identification/verification et enjeux de confidentialité</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Reconnaissance faciale</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-red-500 before:font-bold">Techniques d'identification/verification et enjeux de confidentialité</li>
                     </ul>
                 </li>
             </ul>

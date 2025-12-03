@@ -3,72 +3,72 @@
 {% block title %}Compétences en administration réseau{% endblock %}
 
 {% block body %}
-<div class="reseau">
+<div class="flex flex-col gap-12">
    
-    <h2>Compétences en administration réseau</h2>
+    <h2 class="text-center text-4xl mb-8 relative inline-block self-center after:content-[''] after:block after:w-20 after:h-1 after:bg-sky-500 after:mx-auto after:mt-2 after:rounded-sm">Compétences en administration réseau</h2>
 
-    <div class="sections">
-        <section class="general">
-            <h3>Administration & Outils</h3>
-            <ul>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
+        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-sky-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['⚙️']">Administration & Outils</h3>
+            <ul class="list-none p-0 flex flex-col gap-6">
                 <li>
-                    <strong>Proxmox</strong>
-                    <ul>
-                        <li>Installation et gestion de consoles virtuelles (Windows 10 2022, Windows 10 Pro, Linux Debian) et de conteneurs.</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Proxmox</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Installation et gestion de consoles virtuelles (Windows 10 2022, Windows 10 Pro, Linux Debian) et de conteneurs.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>SSH</strong>
-                    <ul>
-                        <li>Sécurisation de consoles Debian.</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">SSH</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Sécurisation de consoles Debian.</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>IPfire</strong>
-                    <ul>
-                        <li>Gestion des ports réseau.</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">IPfire</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Gestion des ports réseau.</li>
                     </ul>
                 </li>
             </ul>
         </section>
 
-        <section class="windows">
-            <h3>Sur machines virtuelles <span class="badge bg-primary">Windows</span></h3>
-            <ul>
+        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-sky-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['🪟']">Sur machines virtuelles <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded ml-2 align-middle">Windows</span></h3>
+            <ul class="list-none p-0 flex flex-col gap-6">
                 <li>
-                    <strong>AD/DS (Active Directory/Domain Services)</strong>
-                    <ul>
-                        <li>Création et gestion de GPO (stratégies de groupe)</li>
-                        <li>Création d'OU, attribution de rôles</li>
-                        <li>Mapping de lecteurs pour utilisateurs/groupes</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">AD/DS (Active Directory/Domain Services)</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Création et gestion de GPO (stratégies de groupe)</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Création d'OU, attribution de rôles</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Mapping de lecteurs pour utilisateurs/groupes</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>LDAP (Lightweight Directory Access Protocol)</strong>
-                    <ul>
-                        <li>Intégration de domaines avec GLPI et Nextcloud.</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">LDAP (Lightweight Directory Access Protocol)</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Intégration de domaines avec GLPI et Nextcloud.</li>
                     </ul>
                 </li>
             </ul>
         </section>
 
-        <section class="linux">
-            <h3>Sur machines virtuelles <span class="badge bg-success">Linux</span></h3>
-            <ul>
+        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-sky-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['🐧']">Sur machines virtuelles <span class="bg-green-600 text-white text-xs px-2 py-1 rounded ml-2 align-middle">Linux</span></h3>
+            <ul class="list-none p-0 flex flex-col gap-6">
                 <li>
-                    <strong>Apache2</strong>
-                    <ul>
-                        <li>Création et sécurisation de sites web avec Apache2</li>
-                        <li>Configuration de virtualhosts</li>
-                        <li>Utilisation de liens LDAP</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Apache2</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Création et sécurisation de sites web avec Apache2</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Configuration de virtualhosts</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Utilisation de liens LDAP</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Docker</strong>
-                    <ul>
-                        <li>Conteneurisation d'applications et de données</li>
-                        <li>Montage de volumes pour la persistance des données</li>
-                        <li>Utilisation de liens LDAP</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Docker</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Conteneurisation d'applications et de données</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Montage de volumes pour la persistance des données</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Utilisation de liens LDAP</li>
                     </ul>
                 </li>
             </ul>

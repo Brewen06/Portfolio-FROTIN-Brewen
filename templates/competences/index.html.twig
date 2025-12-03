@@ -3,21 +3,21 @@
 {% block title %}Compétences{% endblock %}
 
 {% block body %}
-<div class="competences-menu">
-    <h2>Mes compétences :</h2>
-    <ul style="list-style: none; padding: 0;">
-        <li style="margin-bottom: 20px;">
-            <a href="{{ path('app_competences_programmation') }}" class="btn btn--programmation">
+<div class="text-center">
+    <h2 class="text-3xl font-bold mb-6 border-l-[5px] border-blue-600 pl-4 text-slate-900 inline-block">Mes compétences :</h2>
+    <ul class="flex flex-wrap justify-center gap-8 mt-8 p-0 list-none">
+        <li class="w-full max-w-[400px]">
+            <a href="{{ path('app_competences_programmation') }}" class="flex items-center justify-center w-full py-5 px-8 font-sans text-lg font-semibold uppercase tracking-wide text-white bg-gradient-to-br from-blue-500 to-blue-600 rounded-full border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl no-underline">
                 Programmation
             </a>
         </li>
-        <li style="margin-bottom: 20px;">
-            <a href="{{ path('app_competences_reseaux') }}" class="btn btn--reseaux">
+        <li class="w-full max-w-[400px]">
+            <a href="{{ path('app_competences_reseaux') }}" class="flex items-center justify-center w-full py-5 px-8 font-sans text-lg font-semibold uppercase tracking-wide text-white bg-gradient-to-br from-sky-500 to-sky-700 rounded-full border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl no-underline">
                 Réseaux
             </a>
         </li>
-        <li>
-            <a href="{{ path('app_competences_cyber') }}" class="btn btn--cyber">
+        <li class="w-full max-w-[400px]">
+            <a href="{{ path('app_competences_cyber') }}" class="flex items-center justify-center w-full py-5 px-8 font-sans text-lg font-semibold uppercase tracking-wide text-white bg-gradient-to-br from-red-500 to-red-600 rounded-full border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl no-underline">
                 Cybersécurité
             </a>
         </li>

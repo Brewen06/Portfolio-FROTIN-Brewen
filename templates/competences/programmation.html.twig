@@ -3,86 +3,86 @@
 {% block title %}Compétences en programmation et developpement{% endblock %}
 
 {% block body %}
-<div class="programmation">
+<div class="flex flex-col gap-12">
    
-    <h2 class="">Compétences en programmation et développement</h2>
+    <h2 class="text-center text-4xl mb-8 relative inline-block self-center after:content-[''] after:block after:w-20 after:h-1 after:bg-blue-600 after:mx-auto after:mt-2 after:rounded-sm">Compétences en programmation et développement</h2>
 
-    <div class="sections">
-        <section class="langages">
-            <h3>Langages de programmation</h3>
-            <ul>
+    <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
+        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-blue-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['💻']">Langages de programmation</h3>
+            <ul class="list-none p-0 flex flex-col gap-6">
                 <li>
-                    <strong>HTML</strong>
-                    <ul>
-                        <li>Création de sites web modernes et responsives</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">HTML</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Création de sites web modernes et responsives</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>Python</strong>
-                    <ul>
-                        <li>Utiliser les opérateurs Python</li>
-                        <li>Utilisation des commandes pour les listes et tableaux (len, res, etc.)</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Python</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Utiliser les opérateurs Python</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Utilisation des commandes pour les listes et tableaux (len, res, etc.)</li>
                     </ul>
                 </li>
                 <li>
-                    <strong>JavaScript</strong>
-                    <ul>
-                        <li>Créer et gérer des formulaires</li>
-                        <li>Développement d'applications interactives (ex: jeu de casse-brique)</li>
-                        <li>Les bases de Next.js
-                            <ul>
-                                <li>Création de pages et de composants</li>
-                                <li>Gestion des routes et de la navigation</li>
-                                <li>Utilisation de l'API Fetch pour récupérer des données</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">JavaScript</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Créer et gérer des formulaires</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Développement d'applications interactives (ex: jeu de casse-brique)</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Les bases de Next.js
+                            <ul class="flex flex-col gap-2 pl-4 mt-2">
+                                <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Création de pages et de composants</li>
+                                <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Gestion des routes et de la navigation</li>
+                                <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Utilisation de l'API Fetch pour récupérer des données</li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <strong>PHP</strong>
-                    <ul>
-                        <li>Création et gestion de formulaires sécurisés</li>
-                        <li>Gestion des logs et des erreurs</li>
-                        <li>Connexion et manipulation de bases de données avec PDO</li>
-                        <li>Les bases de Symfony
-                            <ul>
-                                <li>Gérer les entités, les contrôleurs, les routes et les templates</li>
-                                <li>Utiliser Doctrine pour les opérations CRUD</li>
-                                <li>Utiliser Twig pour le rendu des templates</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">PHP</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Création et gestion de formulaires sécurisés</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Gestion des logs et des erreurs</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Connexion et manipulation de bases de données avec PDO</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Les bases de Symfony
+                            <ul class="flex flex-col gap-2 pl-4 mt-2">
+                                <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Gérer les entités, les contrôleurs, les routes et les templates</li>
+                                <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Utiliser Doctrine pour les opérations CRUD</li>
+                                <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Utiliser Twig pour le rendu des templates</li>
                             </ul>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <strong>C#</strong>
-                    <ul>
-                        <li>Programmation orientée objet avec EnigmAlgo</li>
-                        <li>Classification d’objets et gestion de collections</li>
-                        <li>Création graphique 2D/3D</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">C#</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Programmation orientée objet avec EnigmAlgo</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Classification d’objets et gestion de collections</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Création graphique 2D/3D</li>
                     </ul>
                 </li>
             </ul>
         </section>
 
-        <section class="BD">
-            <h3>Bases de données</h3>
-            <ul>
+        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-blue-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['🗄️']">Bases de données</h3>
+            <ul class="list-none p-0 flex flex-col gap-6">
                 <li>
-                    <strong>SQL</strong>
-                    <ul>
-                        <li>Requêtes avancées : jointures, sous-requêtes, agrégations</li>
-                        <li>Gestion et modification de bases de données</li>
+                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">SQL</strong>
+                    <ul class="flex flex-col gap-2 pl-4">
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Requêtes avancées : jointures, sous-requêtes, agrégations</li>
+                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Gestion et modification de bases de données</li>
                     </ul>
                 </li>
             </ul>
         </section>
 
-        <section class="GIT">
-            <h3>Git &amp; GitHub</h3>
-            <ul>
-                <li>Création et gestion d’arborescences de projets</li>
-                <li>Clonage, fusion et gestion de branches</li>
-                <li>Suivi et gestion des modifications de code</li>
+        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-blue-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
+            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['🐙']">Git &amp; GitHub</h3>
+            <ul class="list-none p-0 flex flex-col gap-6">
+                <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Création et gestion d’arborescences de projets</li>
+                <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Clonage, fusion et gestion de branches</li>
+                <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-blue-600 before:font-bold">Suivi et gestion des modifications de code</li>
             </ul>
         </section>
     </div>

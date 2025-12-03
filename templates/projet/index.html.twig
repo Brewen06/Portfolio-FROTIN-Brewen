@@ -3,21 +3,21 @@
 {% block title %}Projet professionnel{% endblock %}
 
 {% block body %}
-<section class="projet" aria-labelledby="projet-title">
-    <header class="projet_titre">
-        <h1 id="projet-title">Mon projet professionnel</h1>
+<section class="max-w-4xl mx-auto" aria-labelledby="projet-title">
+    <header class="text-center mb-12">
+        <h1 id="projet-title" class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-slate-900 to-blue-600 bg-clip-text text-transparent">Mon projet professionnel</h1>
     </header>
 
-    <p class="projet_intro">
+    <p class="text-center text-xl text-slate-700 mb-12 max-w-2xl mx-auto">
         À l'avenir, j'envisage d'exercer un métier dans la programmation et le développement, en m'appuyant sur les compétences acquises durant mes études.
     </p>
 
-    <section class="projet_contenu" aria-labelledby="projet-objectifs">
-        <h2 id="projet-objectifs">Axes envisagés</h2>
-        <ul>
-            <li>Devenir programmeur de jeux vidéo pour concevoir des expériences originales et donner vie à mes idées.</li>
-            <li>Travailler dans l'audiovisuel, notamment la production musicale : composition, montage et création d'effets.</li>
-            <li>Me spécialiser en intelligence artificielle pour contribuer à la recherche et au développement d'agents intelligents.</li>
+    <section class="bg-white rounded-2xl p-10 shadow-md border border-white/50" aria-labelledby="projet-objectifs">
+        <h2 id="projet-objectifs" class="text-2xl font-bold mb-8 border-l-[5px] border-blue-600 pl-4 text-slate-900">Axes envisagés</h2>
+        <ul class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-8 p-0 list-none">
+            <li class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 flex flex-col justify-center text-center hover:-translate-y-2 hover:shadow-md hover:border-blue-600 before:content-['🎯'] before:text-4xl before:mb-4 before:block">Devenir programmeur de jeux vidéo pour concevoir des expériences originales et donner vie à mes idées.</li>
+            <li class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 flex flex-col justify-center text-center hover:-translate-y-2 hover:shadow-md hover:border-blue-600 before:content-['🎯'] before:text-4xl before:mb-4 before:block">Travailler dans l'audiovisuel, notamment la production musicale : composition, montage et création d'effets.</li>
+            <li class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-all duration-300 flex flex-col justify-center text-center hover:-translate-y-2 hover:shadow-md hover:border-blue-600 before:content-['🎯'] before:text-4xl before:mb-4 before:block">Me spécialiser en intelligence artificielle pour contribuer à la recherche et au développement d'agents intelligents.</li>
         </ul>
     </section>
 </section>

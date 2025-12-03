@@ -3,16 +3,16 @@
 {% block title %}CV{% endblock %}
 
 {% block body %}
-<div class="cv">
-    <h2>Mon CV</h2>
-    <p>
+<div class="text-center">
+    <h2 class="text-3xl font-bold mb-6 border-l-[5px] border-blue-600 pl-4 text-slate-900 inline-block">Mon CV</h2>
+    <p class="mb-8 text-lg text-slate-700">
         Vous pouvez télécharger mon CV en cliquant sur le bouton ci-dessous :
     </p>
     <div>
-        <a href="{{ asset('CV.pdf') }}" download class ="download-btn">
+        <a href="{{ asset('CV.pdf') }}" download class="inline-block mb-8 px-8 py-4 bg-blue-600 text-white rounded-lg font-semibold shadow-md hover:bg-blue-800 hover:-translate-y-1 transition-all duration-200 no-underline">
             Télécharger le CV
         </a>
     </div>
-    <iframe src="{{ asset('CV.pdf') }}" title="Aperçu du CV" class="iframe"></iframe>
+    <iframe src="{{ asset('CV.pdf') }}" title="Aperçu du CV" class="w-full h-[85vh] min-h-[800px] border-none rounded-lg shadow-inner bg-slate-50 mt-8"></iframe>
 </div>
 {% endblock %}

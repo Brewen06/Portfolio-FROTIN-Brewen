@@ -1,39 +1,86 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Mentions légales{% endblock %}
+{% block title %}Mentions Légales - Portfolio{% endblock %}
 
 {% block body %}
-<section class="max-w-4xl mx-auto">
-    <header class="text-center mb-12">
-        <h1 class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-slate-900 to-blue-600 bg-clip-text text-transparent">Mentions légales</h1>
-    </header>
-
-    <p class="text-center text-lg text-slate-700 mb-12">
-        Bienvenue sur mon portfolio. Conformément à la législation en vigueur, voici les informations suivantes :
-    </p>
-
-    <div class="grid gap-8">
-        <article class="bg-white rounded-2xl p-8 shadow-md border border-white/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <h2 class="text-2xl font-bold mb-6 border-l-[5px] border-blue-600 pl-4 text-slate-900">Éditeur du site</h2>
-            <ul class="list-none p-0 flex flex-col gap-3">
-                <li class="text-slate-600 text-lg"><span class="font-semibold text-slate-800">Nom :</span> Brewen Frotin</li>
-                <li class="text-slate-600 text-lg"><span class="font-semibold text-slate-800">Email :</span> <a href="mailto:brewen2006@outlook.fr" class="text-blue-600 hover:underline">brewen2006@outlook.fr</a></li>
-            </ul>
-        </article>
-
-        <article class="bg-white rounded-2xl p-8 shadow-md border border-white/50 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-            <h2 class="text-2xl font-bold mb-6 border-l-[5px] border-blue-600 pl-4 text-slate-900">Hébergement</h2>
-            <ul class="list-none p-0 flex flex-col gap-3">
-                <li class="text-slate-600 text-lg">
-                    <span class="font-semibold text-slate-800">Hébergeur du projet :</span>
-                    <a href="https://github.com/Brewen06/Portfolio-FROTIN-Brewen" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Github</a>.
-                </li>
-                <li class="text-slate-600 text-lg">
-                    <span class="font-semibold text-slate-800">Hébergeur du site web :</span>
-                    <a href="https://www.alwaysdata.com/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">alwaysdata</a>.
-                </li>
-            </ul>
-        </article>
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Mentions Légales</h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+            Informations légales et conditions d'utilisation du site.
+        </p>
     </div>
-</section>
+
+    <div class="space-y-8">
+        {# Éditeur #}
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-8 hover:shadow-md transition-all duration-300">
+            <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                <span class="w-1 h-8 bg-blue-600 rounded-full mr-3"></span>
+                Éditeur du site
+            </h2>
+            <dl class="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-4">
+                <dt class="font-semibold text-slate-900">Nom :</dt>
+                <dd class="text-slate-600">Brewen Frotin</dd>
+                
+                <dt class="font-semibold text-slate-900">Adresse :</dt>
+                <dd class="text-slate-600">1576, Route des Aubrils, La Grande Noé, 50140 Mortain-Bocage</dd>
+                
+                <dt class="font-semibold text-slate-900">Email :</dt>
+                <dd><a href="mailto:brewen2006@outlook.fr" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">brewen2006@outlook.fr</a></dd>
+            </dl>
+        </div>
+
+        {# Hébergement #}
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-8 hover:shadow-md transition-all duration-300">
+            <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                <span class="w-1 h-8 bg-blue-600 rounded-full mr-3"></span>
+                Hébergement
+            </h2>
+            <dl class="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-4">
+                <dt class="font-semibold text-slate-900">Code source :</dt>
+                <dd><a href="https://github.com/Brewen06/Portfolio-FROTIN-Brewen" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">GitHub</a></dd>
+                
+                <dt class="font-semibold text-slate-900">Hébergeur :</dt>
+                <dd><a href="https://www.alwaysdata.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">Alwaysdata</a></dd>
+            </dl>
+        </div>
+
+        {# Propriété intellectuelle #}
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-8 hover:shadow-md transition-all duration-300">
+            <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                <span class="w-1 h-8 bg-blue-600 rounded-full mr-3"></span>
+                Propriété intellectuelle
+            </h2>
+            <p class="text-slate-600 leading-relaxed">
+                L'ensemble du contenu de ce site (textes, images, graphismes, etc.) est la propriété exclusive de Brewen FROTIN, sauf mention contraire. Toute reproduction ou utilisation sans autorisation préalable est interdite et constitue une contrefaçon sanctionnée par le Code de la propriété intellectuelle.
+            </p>
+        </div>
+
+        {# Données personnelles #}
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-8 hover:shadow-md transition-all duration-300">
+            <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                <span class="w-1 h-8 bg-blue-600 rounded-full mr-3"></span>
+                Données personnelles
+            </h2>
+            <p class="text-slate-600 leading-relaxed">
+                Ce site ne collecte aucune donnée personnelle. Aucune information n'est enregistrée, stockée ou partagée lors de votre navigation.
+            </p>
+        </div>
+
+        {# Crédits techniques #}
+        <div class="bg-white rounded-xl shadow-sm border border-slate-100 p-8 hover:shadow-md transition-all duration-300">
+            <h2 class="text-xl font-bold text-slate-900 mb-6 flex items-center">
+                <span class="w-1 h-8 bg-blue-600 rounded-full mr-3"></span>
+                Crédits techniques
+            </h2>
+            <dl class="grid grid-cols-1 sm:grid-cols-[120px_1fr] gap-4">
+                <dt class="font-semibold text-slate-900">Framework :</dt>
+                <dd><a href="https://symfony.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">Symfony</a></dd>
+                
+                <dt class="font-semibold text-slate-900">Design :</dt>
+                <dd><a href="https://tailwindcss.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 hover:underline transition-colors">Tailwind CSS</a></dd>
+            </dl>
+        </div>
+    </div>
+</div>
 {% endblock %}

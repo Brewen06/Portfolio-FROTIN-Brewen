@@ -1,21 +1,58 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Obtentions{% endblock %}
+{% block title %}Obtentions - Brewen Frotin{% endblock %}
 
 {% block body %}
-<div class="text-center">
-    <h2 class="text-3xl font-bold mb-6 border-l-[5px] border-blue-600 pl-4 text-slate-900 inline-block">Mes obtentions :</h2>
-    <ul class="flex flex-wrap justify-center gap-8 mt-8 p-0 list-none">
-        <li class="w-full max-w-[400px]">
-            <a href="{{ path('app_obtentions_diplomes') }}" class="flex items-center justify-center w-full py-5 px-8 font-sans text-lg font-semibold uppercase tracking-wide text-white bg-gradient-to-br from-slate-600 to-slate-700 rounded-full border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl no-underline">
-                Diplômes
-            </a>
-        </li>
-        <li class="w-full max-w-[400px]">
-            <a href="{{ path('app_obtentions_certifications') }}" class="flex items-center justify-center w-full py-5 px-8 font-sans text-lg font-semibold uppercase tracking-wide text-white bg-gradient-to-br from-slate-600 to-slate-700 rounded-full border border-white/10 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-2xl no-underline">
-                Certifications
-            </a>
-        </li>
-    </ul>
+<div class="max-w-5xl mx-auto">
+    <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Mes Obtentions</h1>
+        <p class="text-slate-600 max-w-2xl mx-auto">Diplômes académiques et certifications professionnelles.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Diplômes -->
+        <a href="{{ path('app_obtentions_diplomes') }}" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="h-2 bg-blue-600 w-full"></div>
+            <div class="p-8 text-center">
+                <div class="w-16 h-16 bg-blue-50 rounded-full flex items-center justify-center mb-6 text-blue-600 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.499 5.221 69.78 69.78 0 00-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors">Diplômes</h3>
+                <p class="text-slate-600 mb-6">
+                    Parcours scolaire et diplômes obtenus (Brevet, Baccalauréat).
+                </p>
+                <span class="inline-flex items-center text-blue-600 font-medium">
+                    Voir les détails
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </span>
+            </div>
+        </a>
+
+        <!-- Certifications -->
+        <a href="{{ path('app_obtentions_certifications') }}" class="group block bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+            <div class="h-2 bg-emerald-600 w-full"></div>
+            <div class="p-8 text-center">
+                <div class="w-16 h-16 bg-emerald-50 rounded-full flex items-center justify-center mb-6 text-emerald-600 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-slate-900 mb-3 group-hover:text-emerald-600 transition-colors">Certifications</h3>
+                <p class="text-slate-600 mb-6">
+                    Certifications techniques et attestations de compétences (ANSSI, Pix).
+                </p>
+                <span class="inline-flex items-center text-emerald-600 font-medium">
+                    Voir les détails
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                </span>
+            </div>
+        </a>
+    </div>
 </div>
 {% endblock %}

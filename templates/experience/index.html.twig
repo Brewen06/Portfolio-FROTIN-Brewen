@@ -1,56 +1,92 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Expériences professionnelles{% endblock %}
+{% block title %}Expériences - Brewen Frotin{% endblock %}
 
 {% block body %}
-<section class="max-w-4xl mx-auto" role="region" aria-labelledby="exp-title">
-    <header class="text-center mb-12">
-        <h1 id="exp-title" class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-slate-900 to-blue-600 bg-clip-text text-transparent">Expériences professionnelles</h1>
-    </header>
+<div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Expériences Professionnelles</h1>
+        <p class="text-slate-600 max-w-2xl mx-auto">Mon parcours professionnel, stages et emplois.</p>
+    </div>
 
-    <section class="mb-12" aria-labelledby="stages-title">
-        <h2 id="stages-title" class="text-2xl font-bold mb-6 border-l-[5px] border-blue-600 pl-4 text-slate-900">Stages</h2>
-        <ul class="relative pl-8 border-l-4 border-slate-200 ml-4 list-none">
-            <li class="mb-12 relative before:content-[''] before:absolute before:left-[-2.6rem] before:top-[1.5rem] before:w-5 before:h-5 before:bg-blue-600 before:border-4 before:border-white before:rounded-full before:shadow-[0_0_0_2px_#2563eb] before:z-10">
-                <article class="relative after:content-[''] after:absolute after:top-[1.8rem] after:left-[-2.5rem] after:w-10 after:h-[2px] after:bg-slate-200 after:z-0">
-                    <h3>
-                        <span class="block text-2xl text-slate-900 font-bold mb-2">Atelier de Photographie — Avranches</span>
-                    </h3>
-                    <p class="text-lg text-slate-600">Acquisition des techniques de base : colorimétrie, montage, tirage et agrandissements.</p>
-                </article>
-            </li>
-            <li class="mb-12 relative before:content-[''] before:absolute before:left-[-2.6rem] before:top-[1.5rem] before:w-5 before:h-5 before:bg-blue-600 before:border-4 before:border-white before:rounded-full before:shadow-[0_0_0_2px_#2563eb] before:z-10">
-                <article class="relative after:content-[''] after:absolute after:top-[1.8rem] after:left-[-2.5rem] after:w-10 after:h-[2px] after:bg-slate-200 after:z-0">
-                    <h3>
-                        <span class="block text-2xl text-slate-900 font-bold mb-2">Carrefour — Mortain</span>
-                    </h3>
-                    <p class="text-lg text-slate-600">Découverte des opérations en magasin : facing, inventaires et gestion des stocks.</p>
-                </article>
-            </li>
-            <li class="mb-12 relative before:content-[''] before:absolute before:left-[-2.6rem] before:top-[1.5rem] before:w-5 before:h-5 before:bg-blue-600 before:border-4 before:border-white before:rounded-full before:shadow-[0_0_0_2px_#2563eb] before:z-10">
-                <article class="relative after:content-[''] after:absolute after:top-[1.8rem] after:left-[-2.5rem] after:w-10 after:h-[2px] after:bg-slate-200 after:z-0">
-                    <h3>
-                        <span class="block text-2xl text-slate-900 font-bold mb-2">Ferme Bellevue</span>
-                    </h3>
-                    <p class="text-lg text-slate-600">Développement d'une application mobile Android pour centraliser des messages provenant de diverses plateformes.</p>
-                </article>
-            </li>
-        </ul>
-    </section>
+    <div class="space-y-12">
+        <!-- Stages -->
+        <section>
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-px bg-slate-200 flex-1"></div>
+                <h2 class="text-2xl font-bold text-slate-900">Stages</h2>
+                <div class="h-px bg-slate-200 flex-1"></div>
+            </div>
 
-    <section class="mb-12" aria-labelledby="travail-title">
-        <h2 id="travail-title" class="text-2xl font-bold mb-6 border-l-[5px] border-blue-600 pl-4 text-slate-900">Expériences en entreprise</h2>
-        <ul class="relative pl-8 border-l-4 border-slate-200 ml-4 list-none">
-            <li class="mb-12 relative before:content-[''] before:absolute before:left-[-2.6rem] before:top-[1.5rem] before:w-5 before:h-5 before:bg-blue-600 before:border-4 before:border-white before:rounded-full before:shadow-[0_0_0_2px_#2563eb] before:z-10">
-                <article class="relative after:content-[''] after:absolute after:top-[1.8rem] after:left-[-2.5rem] after:w-10 after:h-[2px] after:bg-slate-200 after:z-0">
-                    <h3>
-                        <span class="block text-2xl text-slate-900 font-bold mb-2">Carrefour — Mortain</span>
-                        <span class="inline-block bg-sky-100 text-sky-700 px-3 py-1 rounded-full text-sm font-semibold mt-2">Caissier</span>
-                    </h3>
-                    <p class="text-lg text-slate-600">Service client, gestion de la caisse, suivi des commandes et maintien de la présentation des rayons.</p>
-                </article>
-            </li>
-        </ul>
-    </section>
-</section>
+            <div class="relative border-l-2 border-slate-200 ml-3 md:ml-6 space-y-8 pb-4">
+                <!-- Ferme Bellevue -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 rounded-full border-4 border-white bg-blue-600 shadow-sm"></div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
+                            <h3 class="text-xl font-bold text-slate-900">Ferme Bellevue</h3>
+                            <span class="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full w-fit">Développement Mobile</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed">
+                            Développement d'une application mobile Android pour centraliser des messages provenant de diverses plateformes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Carrefour -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 rounded-full border-4 border-white bg-slate-400 shadow-sm"></div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
+                            <h3 class="text-xl font-bold text-slate-900">Carrefour — Mortain</h3>
+                            <span class="text-sm font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full w-fit">Découverte</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed">
+                            Découverte des opérations en magasin : facing, inventaires et gestion des stocks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Atelier Photo -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 rounded-full border-4 border-white bg-slate-400 shadow-sm"></div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
+                            <h3 class="text-xl font-bold text-slate-900">Atelier de Photographie — Avranches</h3>
+                            <span class="text-sm font-medium text-slate-600 bg-slate-100 px-3 py-1 rounded-full w-fit">Découverte</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed">
+                            Acquisition des techniques de base : colorimétrie, montage, tirage et agrandissements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emplois -->
+        <section>
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-px bg-slate-200 flex-1"></div>
+                <h2 class="text-2xl font-bold text-slate-900">Expériences en entreprise</h2>
+                <div class="h-px bg-slate-200 flex-1"></div>
+            </div>
+
+            <div class="relative border-l-2 border-slate-200 ml-3 md:ml-6 space-y-8 pb-4">
+                <!-- Carrefour Job -->
+                <div class="relative pl-8 md:pl-12">
+                    <div class="absolute -left-[9px] top-0 w-5 h-5 rounded-full border-4 border-white bg-emerald-600 shadow-sm"></div>
+                    <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2 gap-2">
+                            <h3 class="text-xl font-bold text-slate-900">Carrefour — Mortain</h3>
+                            <span class="text-sm font-medium text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full w-fit">Caissier</span>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed">
+                            Service client et gestion de la caisse.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
 {% endblock %}

@@ -1,78 +1,136 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Compétences en administration réseau{% endblock %}
+{% block title %}Compétences - Réseaux{% endblock %}
 
 {% block body %}
-<div class="flex flex-col gap-12">
-   
-    <h2 class="text-center text-4xl mb-8 relative inline-block self-center after:content-[''] after:block after:w-20 after:h-1 after:bg-sky-500 after:mx-auto after:mt-2 after:rounded-sm">Compétences en administration réseau</h2>
+<div class="max-w-5xl mx-auto">
+    <div class="mb-8">
+        <a href="{{ path('app_competences') }}" class="inline-flex items-center text-sm text-slate-500 hover:text-sky-600 transition-colors mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+            Retour aux compétences
+        </a>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Administration Réseau</h2>
+        <p class="text-slate-600 mt-2">Gestion d'infrastructures, virtualisation et services réseaux.</p>
+    </div>
 
-    <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8">
-        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-sky-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
-            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['⚙️']">Administration & Outils</h3>
-            <ul class="list-none p-0 flex flex-col gap-6">
-                <li>
-                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Proxmox</strong>
-                    <ul class="flex flex-col gap-2 pl-4">
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Installation et gestion de consoles virtuelles (Windows 10 2022, Windows 10 Pro, Linux Debian) et de conteneurs.</li>
+    <div class="grid gap-8">
+        <!-- Administration & Outils -->
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="bg-slate-50 px-6 py-4 border-b border-slate-200 flex items-center gap-3">
+                <span class="text-2xl">⚙️</span>
+                <h3 class="text-lg font-semibold text-slate-900">Administration & Outils</h3>
+            </div>
+            <div class="p-6 grid gap-6 md:grid-cols-3">
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-1 text-xs font-semibold bg-orange-100 text-orange-700 rounded">Proxmox</span>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span>Virtualisation (Windows/Linux) et conteneurs</span>
+                        </li>
                     </ul>
-                </li>
-                <li>
-                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">SSH</strong>
-                    <ul class="flex flex-col gap-2 pl-4">
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Sécurisation de consoles Debian.</li>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-1 text-xs font-semibold bg-slate-200 text-slate-700 rounded">SSH</span>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span>Sécurisation de consoles Debian</span>
+                        </li>
                     </ul>
-                </li>
-                <li>
-                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">IPfire</strong>
-                    <ul class="flex flex-col gap-2 pl-4">
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Gestion des ports réseau.</li>
+                </div>
+                <div class="space-y-3">
+                    <div class="flex items-center gap-2">
+                        <span class="px-2 py-1 text-xs font-semibold bg-red-100 text-red-700 rounded">IPfire</span>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex items-start gap-2 text-sm text-slate-600">
+                            <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                            <span>Gestion des ports et pare-feu</span>
+                        </li>
                     </ul>
-                </li>
-            </ul>
-        </section>
+                </div>
+            </div>
+        </div>
 
-        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-sky-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
-            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['🪟']">Sur machines virtuelles <span class="bg-blue-600 text-white text-xs px-2 py-1 rounded ml-2 align-middle">Windows</span></h3>
-            <ul class="list-none p-0 flex flex-col gap-6">
-                <li>
-                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">AD/DS (Active Directory/Domain Services)</strong>
-                    <ul class="flex flex-col gap-2 pl-4">
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Création et gestion de GPO (stratégies de groupe)</li>
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Création d'OU, attribution de rôles</li>
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Mapping de lecteurs pour utilisateurs/groupes</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">LDAP (Lightweight Directory Access Protocol)</strong>
-                    <ul class="flex flex-col gap-2 pl-4">
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Intégration de domaines avec GLPI et Nextcloud.</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-200 flex items-center gap-3">
+                    <span class="text-2xl">🪟</span>
+                    <h3 class="text-lg font-semibold text-slate-900">Environnement Windows</h3>
+                </div>
+                <div class="p-6 space-y-6">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-1 text-xs font-semibold bg-blue-100 text-blue-700 rounded">AD DS</span>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>Gestion des GPO (Stratégies de groupe)</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>Gestion des utilisateurs et OU (Unités d'Organisation)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-1 text-xs font-semibold bg-blue-100 text-blue-700 rounded">LDAP</span>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>Intégration avec GLPI et Nextcloud</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-        <section class="bg-white rounded-2xl p-8 shadow-md border-t-[5px] border-sky-500 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl flex flex-col">
-            <h3 class="text-2xl text-slate-900 mb-6 flex items-center gap-3 border-b border-slate-200 pb-4 before:content-['🐧']">Sur machines virtuelles <span class="bg-green-600 text-white text-xs px-2 py-1 rounded ml-2 align-middle">Linux</span></h3>
-            <ul class="list-none p-0 flex flex-col gap-6">
-                <li>
-                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Apache2</strong>
-                    <ul class="flex flex-col gap-2 pl-4">
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Création et sécurisation de sites web avec Apache2</li>
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Configuration de virtualhosts</li>
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Utilisation de liens LDAP</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong class="block text-lg text-slate-800 mb-3 bg-slate-100 px-4 py-2 rounded border-l-4 border-slate-300">Docker</strong>
-                    <ul class="flex flex-col gap-2 pl-4">
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Conteneurisation d'applications et de données</li>
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Montage de volumes pour la persistance des données</li>
-                        <li class="text-sm text-slate-500 relative pl-6 bg-transparent border-none mb-0 before:content-['✓'] before:absolute before:left-0 before:text-sky-500 before:font-bold">Utilisation de liens LDAP</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
+            <!-- Linux -->
+            <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                <div class="bg-slate-50 px-6 py-4 border-b border-slate-200 flex items-center gap-3">
+                    <span class="text-2xl">🐧</span>
+                    <h3 class="text-lg font-semibold text-slate-900">Environnement Linux</h3>
+                </div>
+                <div class="p-6 space-y-6">
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-1 text-xs font-semibold bg-orange-100 text-orange-700 rounded">Apache2</span>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>Configuration de serveurs web et VirtualHosts</span>
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>Sécurisation et authentification LDAP</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-1 text-xs font-semibold bg-blue-100 text-blue-700 rounded">Docker</span>
+                        </div>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2 text-sm text-slate-600">
+                                <svg class="w-5 h-5 text-green-500 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+                                <span>Déploiement de conteneurs et volumes</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}

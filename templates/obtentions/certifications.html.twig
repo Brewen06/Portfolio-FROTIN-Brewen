@@ -1,32 +1,62 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Certifications{% endblock %}
+{% block title %}Certifications - Brewen Frotin{% endblock %}
 
 {% block body %}
-<section class="flex flex-col gap-8 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-6 border-l-[5px] border-blue-600 pl-4 text-slate-900 inline-block">
-        Certifications
-    </h2>
-    <div class="bg-white rounded-2xl p-8 shadow-md border-l-[5px] border-blue-600 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-        <h3 class="text-2xl text-slate-900 mb-6 border-b border-slate-200 pb-2">
-            Lycée Notre Dame de La Providence, Avranches
-        </h3>
-        <ul class="p-0 list-none">
-            <li class="flex flex-wrap justify-between items-center p-4 bg-slate-50 rounded-lg mb-4 border border-slate-200 last:mb-0">
-                <a href="/attestation-ANSSI.pdf" class="flex items-center gap-2 text-blue-600 font-bold no-underline transition-colors duration-200 hover:text-blue-800 hover:underline before:content-['📜']" target="_blank" rel="noopener noreferrer">
-                    <strong>ANSSI</strong>
-                </a>
-                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2025</span>
-                <span class="block w-full mt-2 text-sm text-slate-500">Attestation de sensibilisation à la cybersécurité délivrée par l'ANSSI.</span>
-            </li>
-            <li class="flex flex-wrap justify-between items-center p-4 bg-slate-50 rounded-lg mb-4 border border-slate-200 last:mb-0">
-                <span class="font-bold text-lg text-slate-900">
-                    <strong>Voltaire</strong>
-                </span>
-                <span class="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">2025</span>
-                <span class="block w-full mt-2 text-sm text-slate-500">Certification de maîtrise de la langue française (Projet Voltaire).</span>
-            </li>
-        </ul>
+<div class="max-w-4xl mx-auto">
+    <div class="mb-8">
+        <a href="{{ path('app_obtentions') }}" class="inline-flex items-center text-sm text-slate-500 hover:text-blue-600 transition-colors mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+            Retour aux obtentions
+        </a>
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Certifications</h2>
+        <p class="text-slate-600 mt-2">Certifications professionnelles et attestations de compétences.</p>
     </div>
-</section>
+
+    <div class="space-y-8">
+        <div class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+            <div class="bg-slate-50 px-6 py-4 border-b border-slate-200 flex items-center justify-between">
+                <h3 class="text-lg font-semibold text-slate-900">Lycée Notre Dame de La Providence — Avranches</h3>
+                <span class="text-sm font-medium text-slate-500">2025</span>
+            </div>
+            <div class="p-6 space-y-6">
+                <!-- ANSSI -->
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-4 border-b border-slate-100 pb-6 last:border-0 last:pb-0">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <h4 class="font-bold text-lg text-slate-900">ANSSI - SecNumAcadémie</h4>
+                            <span class="px-2 py-0.5 bg-emerald-100 text-emerald-700 rounded text-xs font-medium">Cybersécurité</span>
+                        </div>
+                        <p class="text-slate-600 text-sm mb-3">
+                            Attestation de sensibilisation à la cybersécurité délivrée par l'Agence Nationale de la Sécurité des Systèmes d'Information.
+                        </p>
+                        <a href="/attestation-ANSSI.pdf" target="_blank" class="inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 mr-1">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
+                            </svg>
+                            Voir l'attestation
+                        </a>
+                    </div>
+                    <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium whitespace-nowrap">2025</span>
+                </div>
+
+                <!-- Voltaire -->
+                <div class="flex flex-col md:flex-row md:items-start justify-between gap-4">
+                    <div class="flex-1">
+                        <div class="flex items-center gap-2 mb-2">
+                            <h4 class="font-bold text-lg text-slate-900">Projet Voltaire</h4>
+                            <span class="px-2 py-0.5 bg-blue-100 text-blue-700 rounded text-xs font-medium">Français</span>
+                        </div>
+                        <p class="text-slate-600 text-sm">
+                            Certification de maîtrise de la langue française (Orthographe et Grammaire).
+                        </p>
+                    </div>
+                    <span class="px-3 py-1 bg-slate-100 text-slate-700 rounded-full text-sm font-medium whitespace-nowrap">2025</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

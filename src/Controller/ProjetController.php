@@ -15,4 +15,20 @@ final class ProjetController extends AbstractController
             'controller_name' => 'ProjetController',
         ]);
     }
+
+    #[Route('/projet/professionel', name: 'app_projet_professionel')]
+    public function professionel(): Response
+    {
+        return $this->render('projet/professionel.html.twig', [
+            'controller_name' => 'ProjetController',
+        ]);
+    }
+
+    #[Route('/projet/realise', name: 'app_projet_realise')]
+    public function realise(): Response
+    {
+        return $this->render('projet/realise.html.twig', [
+            'controller_name' => 'ProjetController',
+        ]);
+    }
 }

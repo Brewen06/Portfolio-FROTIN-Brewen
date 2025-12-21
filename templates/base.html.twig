@@ -54,8 +54,15 @@
                 <li class="relative h-full flex items-center group mx-2">
                     <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/expériences">Expériences professionnelles</a>
                 </li>
-                <li class="relative h-full flex items-center group mx-2">
-                    <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/projet">Projet professionnel</a>
+                <li class="relative h-full flex items-center group mx-2" id="dropdown-projets">
+                    <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/projets" id="navbarDropdownProjets" role="button"
+                        aria-expanded="false">
+                        Projets
+                    </a>
+                    <ul class="absolute top-full left-1/2 -translate-x-1/2 translate-y-2 bg-white border border-slate-200 rounded-lg shadow-xl p-2 min-w-[220px] w-max opacity-0 invisible group-hover:opacity-100 group-hover:visible group-hover:translate-y-4 transition-all duration-200 z-[1001] before:content-[''] before:absolute before:top-[-6px] before:left-1/2 before:-translate-x-1/2 before:rotate-45 before:w-3 before:h-3 before:bg-white before:border-t before:border-l before:border-slate-200" aria-labelledby="navbarDropdownProjets">
+                        <li><a class="block px-4 py-3 text-slate-800 text-sm rounded transition-colors duration-200 whitespace-nowrap hover:bg-slate-100 hover:text-blue-600 no-underline" href="/projets/professionnels">Projets professionnels</a></li>
+                        <li><a class="block px-4 py-3 text-slate-800 text-sm rounded transition-colors duration-200 whitespace-nowrap hover:bg-slate-100 hover:text-blue-600 no-underline" href="/projets/realises">Projets réalisés</a></li>
+                    </ul>
                 </li>
                 <li class="relative h-full flex items-center group mx-2" id="dropdown-obtentions">
                     <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/obtentions" id="navbarDropdownObtentions" role="button"
@@ -73,6 +80,7 @@
                 <li class="relative h-full flex items-center group mx-2">
                     <a class="text-sm font-medium text-white/75 py-2 relative whitespace-nowrap hover:text-white transition-colors duration-200 no-underline after:content-[''] after:absolute after:bottom-[-4px] after:left-0 after:w-0 after:h-[2px] after:bg-blue-600 after:transition-[width] after:duration-300 group-hover:after:w-full" href="/cv">CV</a>
                 </li>
+                
             </ul>
         </nav>
     </header>
@@ -108,10 +116,6 @@
 
                 <li>
                     <a class="block py-3 text-center text-xl font-semibold text-white hover:text-blue-400 hover:bg-white/5 rounded-xl transition-all duration-200" href="/expériences">Expériences</a>
-                </li>
-                
-                <li>
-                    <a class="block py-3 text-center text-xl font-semibold text-white hover:text-blue-400 hover:bg-white/5 rounded-xl transition-all duration-200" href="/projet">Projet</a>
                 </li>
 
                 <li class="w-full">

@@ -13,7 +13,6 @@ final class VeilleController extends AbstractController
     {
         $rss_sources = [
             'Le Monde Informatique' => 'https://www.lemondeinformatique.fr/flux-rss/thematique/intelligence-artificielle/rss.xml',
-            'Le Monde' => 'https://www.lemonde.fr/intelligence-artificielle/rss_full.xml',
         ];
         $feed_items = [];
         $seen_links = [];

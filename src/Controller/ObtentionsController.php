@@ -27,6 +27,7 @@ final class ObtentionsController extends AbstractController
         $path =  'C:\Users\ordi2124253\Documents\Portfolio-FROTIN-Brewen\public\attestation-ANSSI.pdf';
         return $this->file($path);
     }
+
     #[Route('/obtentions/diplomes', name: 'app_obtentions_diplomes')]
     public function diplomes(): Response
     {
